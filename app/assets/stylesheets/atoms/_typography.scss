@@ -1,0 +1,64 @@
+/* ==============================
+/*  Typography
+ * ============================== */
+@font-face {
+  font-family: "GT-Eesti";
+  src: url('fonts/GT-Eesti-Display-Medium.ttf') format("truetype");
+}
+@font-face {
+  font-family: "GT-Eesti-lighter";
+  src: url('fonts/GT-Eesti-Text-Book.ttf') format("truetype");
+}
+
+p, ul, ol, span, label {
+  font-size: 1.1em;
+}
+
+@include tablet-vertical {
+  p, ul, ol, span, label {
+    font-size: 1.5em;
+  }
+}
+
+/* ------------------------------
+/*  Headers
+ * ------------------------------ */
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta, .espilon, .zeta {
+  margin: 0 0 0.5em 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+h1,
+.alpha {
+  font-size: 3.6em;
+  line-height: 1.2;
+  color: $black;
+}
+
+@media screen and (min-width: 480px) {
+  h1, .alpha {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1, .alpha {
+    font-size: 4.8em;
+  }
+}
+
+h2,
+.beta {
+  font-size: 3.6em;
+  line-height: 1.2;
+  color: $black;
+}
+
+h3,
+.gamma {
+  font-size: 2em;
+  line-height: 1.2;
+  color: $black;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Youtogether</title>
+    <title>YouTogether</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,28 @@
   </head>
 
   <body>
+
+    <header class="banner fixed-top">
+      <div class="global-header-basic">
+        <div class="container">
+          <div class="logo--negativ">
+            <a href="/">
+              <span class="logo__letter">Y</span>
+              <span class="logo__name">YouTogether</span>
+            </a>
+          </div>
+          <nav>
+            <ul class="global-nav">
+              <li class="global-nav__element"><a href="#">Rooms</a></li>
+              <li class="global-nav__element"><a href="#">Sign Up</a></li>
+              <li class="global-nav__element"><a href="#">Log in</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+
     <%= yield %>
   </body>
 </html>

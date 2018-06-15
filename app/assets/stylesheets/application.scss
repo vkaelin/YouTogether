@@ -11,6 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
 // Include
 @import 'include/normalize.css';
 @import 'include/bootstrap-grid.css';
@@ -19,12 +23,16 @@
 @import "base/variables";
 @import "base/helpers";
 @import "base/base";
+@import "base/mixins";
 
 // Atoms
-
+@import "atoms/typography";
+@import "atoms/navigation";
+@import "atoms/logo";
 
 // Molecules
 @import "molecules/hero";
 
 // Organisms
+@import "organisms/header";
 @import "organisms/masthead";

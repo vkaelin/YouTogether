@@ -1,0 +1,36 @@
+/* ------------------------------
+/*  Navigation
+ * ------------------------------ */
+.global-nav {
+  margin: 0;
+  padding: 0;
+
+  > li {
+    float: left;
+    list-style-type: none;
+    margin-left: $pulse;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  .active {
+    border-bottom: 1px solid $black;
+
+    &:hover {
+      border-bottom: 1px solid lighten($black, 25);
+    }
+  }
+
+  a {
+    font-family: 'GT-Eesti-lighter', "Lato", sans-serif;
+    font-size: 1.8rem;
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($white, 10);
+    }
+  }
+}

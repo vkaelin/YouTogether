@@ -2,7 +2,7 @@
  * Base
  * ============================== */
 html {
-  font-family: "Rubik", helvetica, arial, sans-serif;
+  font-family: "Lato", helvetica, arial, sans-serif;
   font-size: 62.5%; /* go from 16px to 10px */
   line-height: $base-line-height;
   background-color: $white;
@@ -13,3 +13,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+// .wrapper {
+//   min-height: 100%;
+// height: auto !important;
+// height: 100%;
+// margin: 0 auto;
+// }

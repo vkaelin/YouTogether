@@ -6,6 +6,10 @@
   position: relative;
   overflow: hidden;
 
+  &__container {
+    margin-top: 200px;
+  }
+
   &__end {
     position: absolute;
     bottom: -40px;
@@ -13,4 +17,9 @@
     transform: translate(-50%, -50%);
     overflow: hidden;
   }
+}
+
+.homepage-img {
+  height: 100%;
+  background: asset-url("random.jpg")
 }

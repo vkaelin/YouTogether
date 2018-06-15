@@ -1,0 +1,59 @@
+/* ------------------------------
+/*  Header
+ * ------------------------------ */
+.global-header {
+  margin: 0 0 ($pulse * 3) 0;
+  // border-bottom: 1px solid $gray-1;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    float: left;
+    margin-right: 1.6em;
+  }
+
+  .global-nav {
+    float: right;
+    padding: 0;
+  }
+}
+
+/* Header basic */
+.global-header-basic {
+  @extend .global-header;
+
+  .container {
+    padding: $pulse 0;
+  }
+
+  @include tablet-vertical {
+    nav {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+/* Header when scrolling */
+.global-header-animated {
+  @extend .global-header-basic;
+
+  background-color: $white;
+  box-shadow: $shadow;
+
+  .logo span {
+    color: $black;
+  }
+
+  .global-nav__element a {
+    color: $black;
+
+    &:hover {
+      color: lighten($black, 10);
+    }
+  }
+
+}
