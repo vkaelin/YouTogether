@@ -1,0 +1,16 @@
+.masthead {
+  background: asset-url('background-left.png') left bottom, linear-gradient(to right, #23BE84, #06E4FF);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &__end {
+    position: absolute;
+    bottom: -42px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+}

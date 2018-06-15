@@ -1,0 +1,15 @@
+/* ==============================
+ * Base
+ * ============================== */
+html {
+  font-family: "Rubik", helvetica, arial, sans-serif;
+  font-size: 62.5%; /* go from 16px to 10px */
+  line-height: $base-line-height;
+  background-color: $white;
+}
+
+body {
+  color: $gray-1;
+  margin: 0;
+  padding: 0;
+}
