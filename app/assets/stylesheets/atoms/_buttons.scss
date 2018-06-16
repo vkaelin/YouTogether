@@ -1,0 +1,63 @@
+/* -----------------------------
+/*  Buttons
+ * ----------------------------- */
+.btn {
+  font-size: 1.3rem;
+  background: $white;
+  color: $black;
+
+  padding: $pulse/2 $pulse;
+  margin: 0;
+
+  border: 1px solid $gray-1;
+  border-radius: 4px;
+
+  text-decoration: none;
+  font-family: 'GT-Eesti', 'Lato', sans-serif;
+  font-size: 1.6em;
+
+  cursor: pointer;
+  // display: flex;
+  // align-items: center;
+  display: inline-block;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    background-color: #e3e3e9;
+    color: $primary-color;
+  }
+}
+
+.btn--primary {
+  @extend .btn;
+  background-color: $primary-color;
+  color: $white;
+  border: 1px solid $primary-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($primary-color, 20);
+    border-color: darken($primary-color, 15);
+    color: $white;
+    transition: background 0.1s ease-in;
+  }
+}
+
+.btn--secondary {
+  @extend .btn;
+  background-color: $blue;
+  color: $white;
+  border: 1px solid $blue;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($blue, 5);
+    border-color: darken($blue, 5);
+    color: $white;
+    transition: background 0.1s ease-in;
+  }
+}

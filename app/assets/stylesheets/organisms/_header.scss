@@ -27,14 +27,14 @@
   @extend .global-header;
 
   .container {
-    padding: $pulse 0;
+    padding: $pulse;
   }
 
-  @include tablet-vertical {
+  // @include tablet-vertical {
     nav {
       flex: 1 0 auto;
     }
-  }
+  // }
 }
 
 /* Header when scrolling */

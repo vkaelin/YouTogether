@@ -1,14 +1,27 @@
 .hero {
+  margin: 0 0 $pulse*2 0;
+  
   &__title {
     font-family: 'GT-Eesti', "Lato", sans-serif;
     color: $white;
     font-weight: normal;
-    -webkit-font-smoothing: antialiased;
   }
 
   &__subtitle {
-    color: #FFF;
+    color: $white;
     font-weight: normal;
-    -webkit-font-smoothing: antialiased;
+    margin: 0 0 $pulse*2 0;
+  }
+
+  &__footer {
+    color: $white;
+
+    &__join {
+      margin: 0 $pulse 0 0;
+    }
+
+    &__log {
+      margin: 0;
+    }
   }
 }

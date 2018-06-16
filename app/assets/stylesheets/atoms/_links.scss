@@ -1,0 +1,11 @@
+/* -----------------------------
+/*  Links
+ * ----------------------------- */
+.white-link {
+  color: $white;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($white, 15);
+  }
+}

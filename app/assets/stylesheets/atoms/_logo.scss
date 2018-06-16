@@ -11,18 +11,19 @@
   }
 
   &__letter {
-    font-family: 'GT-Eesti';
+    font-family: 'GT-Eesti', 'Lato', sans-serif;
     font-size: 3.6em;
     font-weight: bold;
     line-height: 1.2;
-    margin: 0 $pulse/2 0 0;
+
   }
 
   &__name {
-    font-family: 'GT-Eesti-lighter';
+    font-family: 'GT-Eesti', 'Lato', sans-serif;
     font-size: 1.8em;
     font-weight: normal;
     white-space: nowrap;
+    margin-left: -4px;
   }
 }
 

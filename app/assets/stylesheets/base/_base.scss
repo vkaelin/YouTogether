@@ -4,6 +4,7 @@
 html {
   font-family: "Lato", helvetica, arial, sans-serif;
   font-size: 62.5%; /* go from 16px to 10px */
+  -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
   background-color: $white;
 }
