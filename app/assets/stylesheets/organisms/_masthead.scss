@@ -36,4 +36,9 @@
     height: 100vh;
     padding-bottom: 0;
   }
+
+  @include tablet-big {
+    height: 100vh;
+    padding-bottom: 0;
+  }
 }

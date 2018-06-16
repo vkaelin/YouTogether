@@ -11,6 +11,12 @@
 }
 
 @mixin tablet {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet-big {
   @media screen and (min-width: 800px) {
     @content;
   }
