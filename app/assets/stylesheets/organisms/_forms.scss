@@ -1,0 +1,108 @@
+/* -----------------------------
+/*  Forms
+ * ----------------------------- */
+.input-group__label {
+  display: inline-block;
+  margin: 0 0 $pulse;
+  cursor: pointer;
+}
+
+.input-group__field {
+  padding: $pulse;
+  margin: 0 0 $pulse;
+  font-size: 1.6em;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group__field:not([type="file"]) {
+  background-color: $white;
+  border: 1px solid $gray-2;
+  border-radius: 3px;
+  box-shadow: $shadow;
+  transition: all 0.15s cubic-bezier(.44,-0.44,.44,1.66);
+}
+
+.input-group__field:focus {
+  border-color: $gray-1;
+  box-shadow: $shadow-2;
+}
+
+.input-group textarea {
+  height: 100px;
+}
+
+/* Responsive */
+@include tablet {
+  .input-group--horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .input-group--horizontal .input-group__label,
+  .input-group--horizontal > .field_with_errors {
+    flex: 0 1 20%;
+    margin-top: 1.25rem;
+  }
+
+  .input-group--horizontal .input-group__field,
+  .input-group--horizontal > .field_with_errors ~ .field_with_errors {
+    flex: 1 0 auto;
+    width: auto;
+
+    .input-group__field {
+      width: 100%;
+    }
+  }
+}
+
+
+/* Input Row */
+.input-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-row__field {
+  flex: 1 0 auto;
+  background-color: $white;
+  border: 1px solid $gray-2;
+  box-shadow: none;
+  padding: $pulse;
+  font-size: 1.6rem;
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.input-row__field:focus {
+  border-color: $gray-1;
+}
+
+/* Alert */
+.alert {
+  color: $red;
+  font-size: 1.6rem;
+  margin-bottom: $pulse;
+}
+
+@include tablet {
+  .alert--wide {
+    margin-left: 20%;
+  }
+}
+
+/* Prompt */
+.prompt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: $pulse;
+}
+
+.prompt__confirm {
+  flex: 1 0 auto;
+  justify-content: center;
+}

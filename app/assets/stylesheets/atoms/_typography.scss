@@ -11,13 +11,7 @@
 }
 
 p, ul, ol, span, label {
-  font-size: 1.1em;
-}
-
-@include tablet {
-  p, ul, ol, span, label {
-    font-size: 1.6em;
-  }
+  font-size: 1.6em;
 }
 
 /* ------------------------------

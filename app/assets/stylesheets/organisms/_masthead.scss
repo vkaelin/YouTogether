@@ -1,8 +1,9 @@
 .masthead {
-  background: asset-url('background-left.png') left bottom, linear-gradient(to right, $grad-1, $grad-2);
+  // background: asset-url('background-left.png') left bottom, linear-gradient(to right, $grad-1, $grad-2);
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
   background-repeat: no-repeat;
   width: 100vw;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   position: relative;
   overflow: hidden;
 
@@ -40,5 +41,17 @@
   @include tablet-big {
     height: 100vh;
     padding-bottom: 0;
+  }
+}
+
+
+.masthead--inversed {
+  @extend .masthead;
+
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
+  background-repeat: no-repeat;
+
+  .masthead__container {
+    margin-top: $pulse*6;
   }
 }
