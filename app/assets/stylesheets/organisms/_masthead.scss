@@ -2,7 +2,7 @@
   background: asset-url('background-left.png') left bottom, linear-gradient(to right, $grad-1, $grad-2);
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  padding-bottom: 50px;
   position: relative;
   overflow: hidden;
 
@@ -30,5 +30,10 @@
     background-position: center;
     border-radius: 8px;
     box-shadow: $shadow-2;
+  }
+
+  @include tablet-vertical {
+    height: 100vh;
+    padding-bottom: 0;
   }
 }
