@@ -1,0 +1,31 @@
+<main>
+  <section class="envelope">
+    <header class="text--center">
+      <h1 class="gamma">Edit user</h1>
+    </header>
+    <main>
+      <% if(@user.errors.any?) %>
+        <div class="alert alert--wide">
+          <%= @user.errors.full_messages.join('<br />').html_safe %>
+        </div>
+      <% end %>
+      <%= form_for(@user, html: { class: 'form--inpage' }) do |form| %>
+        <div class="input-group input-group--horizontal">
+          <%= form.label(:email, class: 'input-group__label') %>
+          <%= form.text_field(:email, class: 'input-group__field', placeholder: 'e.g. me@epfl.cha') %>
+        </div>
+        <div class="input-group input-group--horizontal">
+          <%= form.label(:name, class: 'input-group__label') %>
+          <%= form.text_field(:name, class: 'input-group__field', placeholder: 'e.g. Diana Prince') %>
+        </div>
+        <div class="input-group input-group--horizontal">
+          <%= form.label(:role, class: 'input-group__label') %>
+          <%= form.select(:role, %w(registered admin), {}, class: 'input-group__field') %>
+        </div>
+        <div class="prompt">
+          <%= form.submit(class: 'btn btn--primary prompt__confirm') %>
+        </div>
+      <% end %>
+    </main>
+  </section>
+</main>
