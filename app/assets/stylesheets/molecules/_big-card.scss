@@ -3,10 +3,19 @@
  * ------------------------------ */
  .big-card {
    max-width: 550px;
-   padding: $pulse*3;
    margin: 0 auto;
 
-   background: $white;
-   box-shadow: $shadow-2;
-   border-radius: 8px;
+   &__content {
+     padding: $pulse*3;
+     background: $white;
+     box-shadow: $shadow-2;
+     border-radius: 8px;
+   }
+ }
+
+ .big-card--extended {
+   @extend .big-card;
+
+   max-width: none;
+   padding: $pulse 0;
  }

@@ -60,6 +60,23 @@
 
 
 /* Input Row */
+.input-inline {
+  max-width: 90%;
+  margin: 0 auto $pulse*2 auto;
+
+  @include tablet {
+    max-width: 80%;
+  }
+
+  @include tablet-big {
+    max-width: 60%;
+  }
+
+  @include desktop {
+    max-width: 40%;
+  }
+}
+
 .input-row {
   display: flex;
   flex-direction: row;

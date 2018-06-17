@@ -9,27 +9,29 @@
         </div>
 
         <section class="big-card">
-          <% if(flash.any?) %>
-            <div class="alert alert--wide">
-              <% flash.each do |name, message| %>
-                <div class="message <%= name %>"><%= message %></div>
-              <% end %>
-            </div>
-          <% end %>
+          <div class="big-card__content">
+            <% if(flash.any?) %>
+              <div class="alert alert--wide">
+                <% flash.each do |name, message| %>
+                  <div class="message <%= name %>"><%= message %></div>
+                <% end %>
+              </div>
+            <% end %>
 
-          <%= form_tag(sessions_path) do %>
-            <div class="input-groupp--horizontal">
-              <%= label_tag(:email, nil, class: 'input-group__label') %>
-              <%= text_field_tag(:email, nil, class: 'input-group__field', placeholder: 'e.g. me@epfl.ch') %>
-            </div>
-            <div class="input-groupp--horizontal">
-              <%= label_tag(:password, nil, class: 'input-group__label') %>
-              <%= password_field_tag(:password, nil, class: 'input-group__field') %>
-            </div>
-            <div class="prompt">
-              <%= submit_tag('Log in', class: 'btn btn--primary  btn-xl prompt__confirm') %>
-            </div>
-          <% end %>
+            <%= form_tag(sessions_path) do %>
+              <div class="input-groupp--horizontal">
+                <%= label_tag(:email, nil, class: 'input-group__label') %>
+                <%= text_field_tag(:email, nil, class: 'input-group__field', placeholder: 'e.g. me@epfl.ch') %>
+              </div>
+              <div class="input-groupp--horizontal">
+                <%= label_tag(:password, nil, class: 'input-group__label') %>
+                <%= password_field_tag(:password, nil, class: 'input-group__field') %>
+              </div>
+              <div class="prompt">
+                <%= submit_tag('Log in', class: 'btn btn--primary  btn-xl prompt__confirm') %>
+              </div>
+            <% end %>
+          </div>
         </section>
 
       </div> <!-- /col-12 -->

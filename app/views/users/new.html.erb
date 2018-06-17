@@ -9,28 +9,30 @@
         </div>
 
         <section class="big-card">
-          <% if(@user.errors.any?) %>
-            <div class="alert alert--wide">
-              <%= @user.errors.full_messages.join('<br />').html_safe %>
-            </div>
-          <% end %>
-          <%= form_for(@user) do |form| %>
-            <div class="input-group--horizontal">
-              <%= form.label(:email, class: 'input-group__label') %>
-              <%= form.text_field(:email, class: 'input-group__field', placeholder:'e.g. me@epfl.ch') %>
-            </div>
-            <div class="input-group--horizontal">
-              <%= form.label(:name, class: 'input-group__label') %>
-              <%= form.text_field(:name, class: 'input-group__field') %>
-            </div>
-            <div class="input-group--horizontal">
-              <%= form.label(:password, class: 'input-group__label') %>
-              <%= form.password_field(:password, class: 'input-group__field') %>
-            </div>
-            <div class="prompt">
-              <%= form.submit('Sign up', class: 'btn--primary btn-xl prompt__confirm') %>
-            </div>
-          <% end %>
+          <div class="big-card__content">
+            <% if(@user.errors.any?) %>
+              <div class="alert alert--wide">
+                <%= @user.errors.full_messages.join('<br />').html_safe %>
+              </div>
+            <% end %>
+            <%= form_for(@user) do |form| %>
+              <div class="input-group--horizontal">
+                <%= form.label(:email, class: 'input-group__label') %>
+                <%= form.text_field(:email, class: 'input-group__field', placeholder:'e.g. me@epfl.ch') %>
+              </div>
+              <div class="input-group--horizontal">
+                <%= form.label(:name, class: 'input-group__label') %>
+                <%= form.text_field(:name, class: 'input-group__field') %>
+              </div>
+              <div class="input-group--horizontal">
+                <%= form.label(:password, class: 'input-group__label') %>
+                <%= form.password_field(:password, class: 'input-group__field') %>
+              </div>
+              <div class="prompt">
+                <%= form.submit('Sign up', class: 'btn--primary btn-xl prompt__confirm') %>
+              </div>
+            <% end %>
+          </div>
         </section>
 
       </div> <!-- /col-12 -->

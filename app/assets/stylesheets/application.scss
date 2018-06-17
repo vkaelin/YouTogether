@@ -16,8 +16,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 // Include
-@import 'include/normalize';
-@import 'include/bootstrap-grid';
+@import 'include/normalize.css';
+@import 'include/bootstrap-grid.css';
 
 // Base
 @import "base/variables";
@@ -35,6 +35,7 @@
 // Molecules
 @import "molecules/hero";
 @import "molecules/big-card";
+@import "molecules/table";
 
 // Organisms
 @import "organisms/header";

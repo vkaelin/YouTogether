@@ -55,3 +55,18 @@
     margin-top: $pulse*6;
   }
 }
+
+.masthead--small {
+  @extend .masthead;
+  // background: asset-url('background-right.png') right 50%, linear-gradient(-45deg, #5846C4, #7A6ADC), $gray-1;
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
+  background-repeat: no-repeat;
+
+  height: auto;
+  max-height: 900px;
+  padding-bottom: 0;
+
+  .masthead__container {
+    margin-top: $pulse*6;
+  }
+}

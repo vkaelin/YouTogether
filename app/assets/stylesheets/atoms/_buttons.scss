@@ -65,3 +65,8 @@
 .btn-xl {
   padding: $pulse;
 }
+
+.btn--inline {
+  border-radius: 0;
+  border-left-width: 0;
+}
