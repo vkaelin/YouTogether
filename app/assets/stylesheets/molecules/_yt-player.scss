@@ -5,20 +5,27 @@
 .controls {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 0 $pulse 0;
 
   .btn-container {
     display: flex;
+    margin: 0 0 $pulse*3 0;
 
     .btn {
       margin: 0 5px;
+
+      &:first-child {
+        margin: 0 5px 0 0;
+      }
     }
   }
 }
 
 /* Time and volume bars */
 .bars {
-  margin: $pulse 0 0 0;
+  // margin: $pulse 0 0 0;
 
   &__row {
     display: flex;
@@ -46,7 +53,7 @@
 
     .slider {
       display: flex;
-      flex-grow: 10;
+      flex: 1;
       height: 100%;
       transform-origin: left;
       border-radius: inherit;
@@ -67,9 +74,10 @@
 #ytplayer {
   // pointer-events: none;
   max-width: 100%;
+  margin: 0 0 $pulse 0;
 }
 
 #time {
-  color: $black;
-  font-size: 24px;
+  width: 65px;
+  cursor: default;
 }

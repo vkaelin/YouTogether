@@ -42,13 +42,24 @@
 
           <h3 id="title"></h3>
           <div class="controls">
+
             <div id="ytplayer"></div>
-            <div class="btn-container">
-              <button class="btn--primary" id="play">Play</button>
-              <button class="btn--primary" id="pause">Pause</button>
-              <button class="btn--primary" id="sync" data-used="false">Sync</button>
+            <div class="second-col">
+              <div class="btn-container">
+                <div class="btn--primary" id="play">Play</div>
+                <div class="btn--primary" id="pause">Pause</div>
+                <div class="btn--primary" id="sync" data-used="false">Sync</div>
+                <div class="btn" id="time">0:00</div>
+              </div>
+              <form action="post" id="change-url">
+                <div class="input-row">
+                  <input type="text" id="url" name="url" class="input-row__field" placeholder="Paste your YT link here">
+                  <button type="submit" class="btn--inline btn--primary">Change URL</button>
+                </div>
+              </form>
+              <span id="video-url" style="display: none;"><%= @url %></span>
             </div>
-            <div id="time"></div>
+
           </div>
 
           <div class="bars">

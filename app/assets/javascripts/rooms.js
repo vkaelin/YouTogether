@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
     /* Click on volume icon to mute */
     var volumeIcon = document.querySelector('.volume-icon');
     volumeIcon.addEventListener("click", function(e) {
-
       if (this.classList.contains("fa-volume-up")) {
         volumeIconClick(this, 0, "fa-volume-up", "fa-volume-off");
       } else {
