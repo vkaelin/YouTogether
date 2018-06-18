@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var volumeSlider = document.querySelector('.volume');
+    document.getElementById("defaultOpen").click();
 
     /* Volume slider on click */
     var volumeContainer = document.querySelector('.volume-container');
@@ -28,6 +29,34 @@ document.addEventListener("DOMContentLoaded", function() {
       volumeSlider.setAttribute("style", "flex-grow: " + volume / 100);
       elem.classList.remove(toRemove);
       elem.classList.add(toAdd);
+    }
+
+
+    /* Tabs */
+    var tabs = document.querySelector('.tab-header');
+    tabs.addEventListener("click", function(e) {
+      openTab(e, e.target.innerText);
+    });
+    document.getElementById("defaultOpen").click();
+
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+
+      // Hide all tabs
+      tabcontent = document.querySelectorAll(".tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+
+      // Remove the class "active" from tablinks
+      tablinks = document.querySelectorAll(".tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].classList.remove("active");
+      }
+
+      // Show current tab and add "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.target.classList.add("active");
     }
 
 

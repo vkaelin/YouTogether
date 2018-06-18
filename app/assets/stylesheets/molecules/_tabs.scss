@@ -1,0 +1,48 @@
+/* ------------------------------
+/*  Tabs
+ * ------------------------------ */
+ .tab-header {
+   overflow: hidden;
+   border-bottom: 1px solid $black;
+   border-radius: 8px 8px 0 0;
+   background-color: $gray-3;
+   font-size: 1.6em;
+   font-family: 'GT-Eesti', 'Lato', sans-serif;
+
+   .tablinks {
+     background-color: inherit;
+     float: left;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     padding: $pulse;
+     transition: 0.3s;
+
+     &:hover {
+       background-color: $gray-2;
+     }
+
+     &.active {
+       background-color: $primary-color;
+       color: $white;
+     }
+   }
+ }
+
+ .tab-content {
+   display: none;
+   padding: 6px 12px;
+   border: 1px solid $gray-3;
+   border-top: none;
+   animation: fadeEffect 1s;
+   border-radius: 0 0 8px 8px;
+
+   .message {
+     font-size: 1.6em;
+   }
+ }
+
+@keyframes fadeEffect {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

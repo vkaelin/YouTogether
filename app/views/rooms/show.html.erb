@@ -2,18 +2,9 @@
   <div class="container masthead__container">
     <div class="row masthead__row">
       <div class="col-12">
-
         <div class="hero text--center">
           <h1 class="hero__title">Valentin's Room</h1>
-          <!-- <h3 class="hero__subtitle m-b-sm">Search for a room:</h3>
-          <%= render(partial: 'search_form') %>
-
-          <div class="hero__footer">
-            <span class="hero__footer__join">Or create a room:</span><a href="#" class="btn--secondary">Create a room</a>
-          </div> -->
         </div>
-
-
       </div> <!-- /col-12 -->
     </div> <!-- /row -->
     <svg class="masthead__end" width="2000px" height="80px" viewBox="0 0 2000 80">
@@ -36,11 +27,15 @@
             <li>Room n.4</li>
           </ul>
         </div>
-      </div>
+      </div> <!-- /col-lg-2 -->
       <div class="col-lg-7">
         <div class="room__col">
 
-          <h3 id="title"></h3>
+
+          <div class="title-container">
+            <i class="fa fa-arrow-right"></i>
+            <h3 id="title"></h3>
+          </div>
           <div class="controls">
 
             <div id="ytplayer"></div>
@@ -76,14 +71,45 @@
               </div>
             </div>
           </div>
-
         </div>
-      </div>
+      </div> <!-- /col-lg-7 -->
       <div class="col-lg-3">
         <div class="room__col">
-          sefsefsef
+          <div class="tab-header">
+            <button class="tablinks" id="defaultOpen">Chat</button>
+            <button class="tablinks">Users</button>
+          </div>
+          <!-- Tab content -->
+          <div id="Chat" class="tab-content">
+
+            <div data-behavior='messages' data-room-id='2'>
+              <% 10.times do |message| %>
+                <div class="message"><strong>Valentin:</strong> Amazing man!</div>
+              <% end %>
+            </div>
+
+            <form action="">
+              <textarea class="input-group__field" name="name" rows="1" cols="80"></textarea>
+            </form>
+
+            <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
+          </div>
+
+          <div id="Users" class="tab-content">
+            <ol>
+              <li>Valentin</li>
+              <li>Valentin</li>
+              <li>Valentin</li>
+              <li>Valentin</li>
+              <li>Valentin</li>
+              <li>Valentin</li>
+              <li>Valentin</li>
+            </ul>
+            <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
+          </div>
+
         </div>
-      </div>
+      </div> <!-- /col-lg-3 -->
     </div>
   </div>
 

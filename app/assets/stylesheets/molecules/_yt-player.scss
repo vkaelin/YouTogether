@@ -10,16 +10,14 @@
   margin: 0 0 $pulse 0;
 
   .btn-container {
-    display: flex;
     margin: 0 0 $pulse*3 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-    .btn {
-      margin: 0 5px;
-
-      &:first-child {
-        margin: 0 5px 0 0;
-      }
-    }
+  .change-url {
+    max-width: 100%;
   }
 }
 

@@ -5,17 +5,38 @@
   margin: 0 auto;
 
   &__col {
-    padding: $pulse $pulse*2;
+    padding: $pulse;
     margin: 0 0 $pulse 0;
 
     background-color: $white;
     border-radius: 8px;
     box-shadow: $shadow;
+
+    .title-container {
+      display: flex;
+      align-items: center;
+      margin: 0 0 $pulse 0;
+
+      .fa {
+        font-size: 20px;
+        width: 20px;
+        color: $black;
+      }
+      #title {
+        margin: 0;
+      }
+    }
   }
 
   .your-rooms {
     text-align: center;
     border-bottom: 1px solid $gray-3;
+  }
+
+  @include tablet-big {
+    &__col {
+      padding: $pulse $pulse*2;
+    }
   }
 }
 
@@ -49,5 +70,5 @@
 .room-container {
   position: relative;
   padding: $pulse*2 0 $pulse*3 0;
-  min-height: 75vh;
+  min-height: 75vh; // TODO: CHANGE IT
 }
