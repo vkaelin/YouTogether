@@ -1,0 +1,56 @@
+/* ------------------------------
+/*  YouTube player
+ * ------------------------------ */
+/* Player and buttons */
+.controls {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  .btn-container {
+    display: flex;
+
+    .btn {
+      margin: 0 5px;
+    }
+  }
+}
+
+/* Time and volume bars */
+.bars {
+  margin: $pulse 0 0 0;
+
+  .progress-container {
+    max-width: 640px;
+    height: 30px;
+    background-color: $gray-1;
+
+    .progress {
+      height: 100%;
+      background-color: $primary-color;
+      transform-origin: left;
+    }
+  }
+
+  .volume-container {
+    max-width: 640px;
+    height: 30px;
+    background-color: $gray-1;
+
+    .volume {
+      height: 100%;
+      background-color: $blue;
+      transform-origin: left;
+    }
+  }
+}
+
+
+// #ytplayer {
+//   pointer-events: none;
+// }
+
+#time {
+  color: $black;
+  font-size: 24px;
+}

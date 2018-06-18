@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function onPlayerReady(event) {
       // event.target.playVideo();
       player.addEventListener('onStateChange', function(state) {
-        // handleState(state.data);
+        handleState(state.data);
       });
       document.getElementById( "title" ).innerText = player.getVideoData().title;
     }
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function handleState(state) {
-    var $seekSlider = $('.progress');
-    var $seekContainer = $('.progress-container');
+    var seekSlider = document.querySelector('.progress');
+    var seekContainer = document.querySelector('.progress-container');
     if (state == 1) {
       duration = player.getDuration();
       var prevTime = 0;
@@ -95,9 +95,7 @@ document.addEventListener("DOMContentLoaded", function() {
             timer.innerHTML = getTime(time);
           }
           var percent = (elapsed / duration);
-          $seekSlider.css({
-            'transform': 'scaleX(' + percent + ')'
-          });
+          seekSlider.setAttribute("style", "transform: scaleX(" + percent + ")");
         }
       }, 50);
     } else {
