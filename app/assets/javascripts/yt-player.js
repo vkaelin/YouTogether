@@ -95,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
             timer.innerHTML = getTime(time);
           }
           var percent = (elapsed / duration);
-          seekSlider.setAttribute("style", "transform: scaleX(" + percent + ")");
+          // seekSlider.setAttribute("style", "transform: scaleX(" + percent + ")");
+          seekSlider.setAttribute("style", "flex-grow: " + (percent + 0.011)); // to fix animation with border radius
         }
       }, 50);
     } else {

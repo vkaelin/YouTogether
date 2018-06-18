@@ -20,35 +20,54 @@
 .bars {
   margin: $pulse 0 0 0;
 
-  .progress-container {
+  &__row {
+    display: flex;
+    align-items: center;
     max-width: 640px;
-    height: 30px;
-    background-color: $gray-1;
 
-    .progress {
-      height: 100%;
-      background-color: $primary-color;
-      transform-origin: left;
+    .fa {
+      font-size: 20px;
+      width: 20px;
+      color: $black;
+      margin: 0 $pulse 0 0;
+    }
+
+    &:first-child {
+      margin: 0 0 $pulse 0;
     }
   }
 
-  .volume-container {
-    max-width: 640px;
+  .slider-container {
+    display: flex;
+    flex: 1;
     height: 30px;
     background-color: $gray-1;
+    border-radius: 8px;
 
-    .volume {
+    .slider {
+      display: flex;
+      flex-grow: 10;
       height: 100%;
-      background-color: $blue;
       transform-origin: left;
+      border-radius: inherit;
+      transition: all 0.4s;
     }
+  }
+
+  .progress {
+    background: linear-gradient(-90deg, $primary-color, $grad-1);;
+  }
+
+  .volume {
+    background: linear-gradient(-90deg, #5846C4, #7A6ADC);
   }
 }
 
 
-// #ytplayer {
-//   pointer-events: none;
-// }
+#ytplayer {
+  // pointer-events: none;
+  max-width: 100%;
+}
 
 #time {
   color: $black;
