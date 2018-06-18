@@ -4,13 +4,13 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Rooms</h1>
-          <h3 class="hero__subtitle m-b-sm">Search for a room:</h3>
+          <h1 class="hero__title">Valentin's Room</h1>
+          <!-- <h3 class="hero__subtitle m-b-sm">Search for a room:</h3>
           <%= render(partial: 'search_form') %>
 
           <div class="hero__footer">
             <span class="hero__footer__join">Or create a room:</span><a href="#" class="btn--secondary">Create a room</a>
-          </div>
+          </div> -->
         </div>
 
 
@@ -23,38 +23,27 @@
 </div> <!-- /masthead -->
 
 
-<section class="gray-bg">
-  <div class="container">
-    <div class="big-card--extended">
-      <div class="big-card__content">
-
-        <ul class="cards bare-list">
-          <% 10.times do %>
-
-          <li class="card">
-            <a class="card__thumb" href="#">
-              <div class="card__thumb__tag tag--green">Joined</div>
-              <img src="http://fpoimg.com/255x170" alt="Random pic"/>
-              <div class="card__intro">
-                <h3 class="card__title">Valentin's Room</h3>
-              </div>
-            </a>
-            <form class="card__footer">
-              <button class="btn--flex btn--solo">
-                <svg class="icon" role="presentation">
-                  <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#done") %>"></use>
-                </svg>
-                Join
-              </button>
-            </form>
-          </li>
-
-          <% end %>
-        </ul>
-
+<section class="gray-bg room-container">
+  <div class="container-fluid">
+    <div class="row room">
+      <div class="col-2">
+        <div class="room__col">
+          awdawdadw
+        </div>
+      </div>
+      <div class="col-7">
+        <div class="room__col">
+          <div id="ytplayer"></div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="room__col">
+          sefsefsef
+        </div>
       </div>
     </div>
   </div>
+
 
   <svg class="before--footer" width="2000px" height="80px" viewBox="0 0 2000 80">
     <path d="M2.95875508e-10,0.271075437 C1.44325251e-05,0.0924814466 0.528253498,-5.71696376e-14 1.59600999,-5.68434189e-14 C48.1099871,-5.68434189e-14 1957.58289,1.84741111e-13 2000,8.52651283e-14 C956.905816,171.471291 -0.000614269229,7.87245453 2.95875508e-10,0.271075437 L0,0 L2000,0 L2000,80 L0,80 L0,0.271075437 Z" fill="#324355" fill-rule="evenodd"></path>

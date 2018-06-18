@@ -1,0 +1,17 @@
+/* ------------------------------
+/*  Room
+ * ------------------------------ */
+.room {
+  margin: 0 auto;
+
+  &__col {
+    background-color: $white;
+    border-radius: 8px;
+    padding: $pulse*2;
+  }
+}
+
+.room-container {
+  position: relative;
+  padding: $pulse*2 0;
+}

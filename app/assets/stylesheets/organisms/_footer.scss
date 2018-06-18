@@ -32,14 +32,11 @@
 }
 
 .before--footer {
-  position: relative;
-  margin: $pulse*2 0 0 0;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
 
-  &__svg {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-  }
+  fill: #F5F7F9;
 }
