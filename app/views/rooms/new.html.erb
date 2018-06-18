@@ -4,8 +4,8 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Log in</h1>
-          <h3 class="hero__subtitle">Or <a  class="white-link" href="#">sign up</a> if you don't have an account.</h3>
+          <h1 class="hero__title">Create your room</h1>
+          <!-- <h3 class="hero__subtitle">Or <a  class="white-link" href="#">sign up</a> if you don't have an account.</h3> -->
         </div>
 
         <section class="big-card">
@@ -18,17 +18,13 @@
               </div>
             <% end %>
 
-            <%= form_tag(sessions_path) do %>
+            <%= form_for(@room) do |form| %>
               <div class="input-group--horizontal">
-                <%= label_tag(:email, nil, class: 'input-group__label') %>
-                <%= text_field_tag(:email, nil, class: 'input-group__field', placeholder: 'e.g. me@epfl.ch') %>
-              </div>
-              <div class="input-group--horizontal">
-                <%= label_tag(:password, nil, class: 'input-group__label') %>
-                <%= password_field_tag(:password, nil, class: 'input-group__field') %>
+                <%= form.label(:name, class: 'input-group__label') %>
+                <%= form.text_field(:name, class: 'input-group__field', placeholder: 'e.g. "Valentin\'s room"') %>
               </div>
               <div class="prompt">
-                <%= submit_tag('Log in', class: 'btn btn--primary  btn-xl prompt__confirm') %>
+                <%= submit_tag('Create room', class: 'btn btn--primary  btn-xl prompt__confirm') %>
               </div>
             <% end %>
           </div>

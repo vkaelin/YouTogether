@@ -3,6 +3,7 @@
   background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
   width: 100vw;
+  min-height: 90vh;
   padding-bottom: 150px;
   position: relative;
   overflow: hidden;
@@ -63,6 +64,7 @@
   background-repeat: no-repeat;
 
   height: auto;
+  min-height: 0;
   max-height: 900px;
   padding-bottom: 0;
 
