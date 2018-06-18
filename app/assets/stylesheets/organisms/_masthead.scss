@@ -34,12 +34,12 @@
   }
 
   @include tablet-vertical {
-    height: 100vh;
+    height: 90vh;
     padding-bottom: 0;
   }
 
   @include tablet-big {
-    height: 100vh;
+    height: 90vh;
     padding-bottom: 0;
   }
 }

@@ -21,3 +21,9 @@
 .icon--blue {
   fill: $primary-color;
 }
+
+.icon--sentence {
+  @extend .icon;
+  margin: 0 5px;
+  fill: $white;
+}

@@ -1,0 +1,45 @@
+/* ------------------------------
+/*  Footer
+ * ------------------------------ */
+.global-footer {
+  background: $black;
+  color: $gray-3;
+  // padding: ($pulse * 1) 0;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+
+  a {
+    color: $gray-3;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($gray-3, 20);
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.before--footer {
+  position: relative;
+  margin: $pulse*2 0 0 0;
+
+  &__svg {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+}
