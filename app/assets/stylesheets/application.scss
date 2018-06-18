@@ -31,11 +31,13 @@
 @import "atoms/logo";
 @import "atoms/buttons";
 @import "atoms/links";
+@import "atoms/icons";
+@import "atoms/tags";
 
 // Molecules
 @import "molecules/hero";
 @import "molecules/big-card";
-@import "molecules/table";
+@import "molecules/card";
 
 // Organisms
 @import "organisms/header";

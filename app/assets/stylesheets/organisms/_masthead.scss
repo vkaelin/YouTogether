@@ -1,6 +1,6 @@
 .masthead {
   // background: asset-url('background-left.png') left bottom, linear-gradient(to right, $grad-1, $grad-2);
-  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
   width: 100vw;
   padding-bottom: 150px;
@@ -48,7 +48,7 @@
 .masthead--inversed {
   @extend .masthead;
 
-  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
 
   .masthead__container {
@@ -58,8 +58,8 @@
 
 .masthead--small {
   @extend .masthead;
-  // background: asset-url('background-right.png') right 50%, linear-gradient(-45deg, #5846C4, #7A6ADC), $gray-1;
-  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color), $gray-1;
+  // background: asset-url('background-right.png') right 50%, linear-gradient(-45deg, #5846C4, #7A6ADC);
+  background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
 
   height: auto;

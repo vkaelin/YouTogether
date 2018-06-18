@@ -1,0 +1,48 @@
+/* -----------------------------
+/*  Tags
+ * ----------------------------- */
+.tag {
+  font-size: 1.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: $gray-3;
+  color: $gray-1;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  padding: ($pulse/4) ($pulse/2);
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+.tag--green {
+  @extend .tag;
+  background-color: $primary-color;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($primary-color, 10);
+    color: $white;
+  }
+}
+
+.tag--red {
+  @extend .tag;
+  background-color: $red;
+  color: $white;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($red, 15);
+    color: $white;
+  }
+}

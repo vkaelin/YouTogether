@@ -1,0 +1,110 @@
+/* ------------------------------
+/*  Card
+ * ------------------------------ */
+.card {
+  box-shadow: $shadow;
+  margin: 0 $pulse $pulse 0;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: $shadow-2;
+  }
+}
+
+.card__thumb {
+  position: relative;
+  text-decoration: none;
+  color: $white;
+  display: block;
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__tag {
+    position: absolute;
+    right: ($pulse/2);
+    top: ($pulse/2);
+  }
+}
+
+.card__intro {
+  padding: 1.6em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  span {
+    font-size: 1.3em;
+  }
+}
+
+.card__title {
+  font-size: 2em;
+  color: $white;
+}
+
+/* Card footer w/buttons */
+.card__footer {
+  display: flex;
+
+  .btn {
+    border: none;
+    border-radius: 0;
+    white-space: nowrap;
+  }
+
+  .btn--left {
+    border-right: 1px solid $gray-3;
+    flex: 1 0 auto;
+    text-align: left;
+    border-radius: 0 0 0 8px;
+  }
+
+  .btn--right {
+    border-radius: 0 0 8px 0;
+  }
+
+  .btn--solo {
+    flex: 1 0 auto;
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+/* ------------------------------
+/*  Cards deck
+ * ------------------------------ */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: -$pulse;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .card {
+    width: 100%;
+    
+    @include tablet {
+      float: left;
+      width: calc(50% - #{$pulse});
+    }
+
+    @include desktop {
+      width: calc(33% - #{$pulse});
+    }
+  }
+}

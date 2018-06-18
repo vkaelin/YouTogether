@@ -28,8 +28,29 @@
     <div class="big-card--extended">
       <div class="big-card__content">
 
-        
+        <ul class="cards bare-list">
+          <% 10.times do %>
 
+          <li class="card">
+            <a class="card__thumb" href="#">
+              <div class="card__thumb__tag tag--green">Joined</div>
+              <img src="http://fpoimg.com/255x170" alt="Random pic"/>
+              <div class="card__intro">
+                <h3 class="card__title">Valentin's Room</h3>
+              </div>
+            </a>
+            <form class="card__footer">
+              <button class="btn--flex btn--solo">
+                <svg class="icon" role="presentation">
+                  <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#done") %>"></use>
+                </svg>
+                Join
+              </button>
+            </form>
+          </li>
+
+          <% end %>
+        </ul>
 
       </div>
     </div>

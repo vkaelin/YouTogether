@@ -62,6 +62,17 @@
   }
 }
 
+.btn--flex {
+  @extend .btn;
+  display: flex;
+  align-items: center;
+  padding: $pulse;
+
+  color: $gray-1;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+}
+
 .btn-xl {
   padding: $pulse;
 }
