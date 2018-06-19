@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     var volumeSlider = document.querySelector('.volume');
-    document.getElementById("defaultOpen").click();
 
     /* Volume slider on click */
     var volumeContainer = document.querySelector('.volume-container');
@@ -60,6 +59,19 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById(tabName).style.display = "block";
       evt.target.classList.add("active");
     }
+
+    /* Reload the page when changing room and changing language to render the YT player */
+    if (document.getElementById('ytplayer') != null) {
+      var yourRooms = document.querySelector('.rooms-list');
+      yourRooms.addEventListener("click", function(e) {
+        location.reload();
+      });
+      var languages = document.querySelector('.languages');
+      languages.addEventListener("click", function(e) {
+        location.reload();
+      });
+    }
+
 
 
 });
