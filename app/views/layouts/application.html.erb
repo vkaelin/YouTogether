@@ -26,9 +26,17 @@
           </div>
           <nav>
             <ul class="global-nav">
-              <li class="global-nav__element"><a href="#">Rooms</a></li>
-              <li class="global-nav__element"><a href="#">Sign Up</a></li>
-              <li class="global-nav__element"><a href="#">Log in</a></li>
+              <li class="global-nav__element">
+                <a href="#">Rooms</a>
+              </li>
+              <li class="global-nav__element">
+                <!-- <a href="#">Sign Up</a> -->
+                <%= link_to('Sign Up', signup_path) %>
+              </li>
+              <li class="global-nav__element">
+                <!-- <a href="#">Log in</a> -->
+                <%= link_to('Log in', login_path) %>
+              </li>
             </ul>
           </nav>
         </div>
