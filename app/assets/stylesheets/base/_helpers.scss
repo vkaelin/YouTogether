@@ -24,6 +24,11 @@
   text-align: center;
 }
 
+.text--title {
+  padding: 0 0 $pulse 0;
+  border-bottom: 1px solid $gray-2;
+}
+
 .m-b-sm {
   margin-bottom: $pulse !important;
 }

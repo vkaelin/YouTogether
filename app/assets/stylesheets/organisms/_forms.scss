@@ -8,7 +8,6 @@
 }
 
 .input-group__field {
-  padding: $pulse;
   margin: 0 0 $pulse;
   font-size: 1.6em;
   display: block;
@@ -17,11 +16,16 @@
 }
 
 .input-group__field:not([type="file"]) {
+  padding: $pulse;
   background-color: $white;
   border: 1px solid $gray-2;
   border-radius: 3px;
   box-shadow: $shadow;
   transition: all 0.15s cubic-bezier(.44,-0.44,.44,1.66);
+}
+
+.input-group__field[type="file"] {
+  padding: $pulse 0;
 }
 
 .input-group__field:focus {

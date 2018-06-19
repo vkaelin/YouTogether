@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   resources :users
 
   resources :sessions, only: [:new, :create, :destroy]
-  
+
   resources :rooms
+
+  get 'account', to: 'account#edit'
+  patch 'account', to: 'account#update'
 
 
 end

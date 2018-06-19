@@ -6,10 +6,14 @@
    margin: 0 auto;
 
    &__content {
-     padding: $pulse*3;
+     padding: $pulse*2 $pulse;
      background: $white;
      box-shadow: $shadow-2;
      border-radius: 8px;
+
+     @include tablet {
+       padding: $pulse*3;
+     }
    }
  }
 
