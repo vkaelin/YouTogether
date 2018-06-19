@@ -33,6 +33,7 @@
 @import "atoms/links";
 @import "atoms/icons";
 @import "atoms/tags";
+@import "atoms/images";
 
 // Molecules
 @import "molecules/hero";
@@ -49,4 +50,5 @@
 @import "organisms/forms";
 
 // Pages
-@import "pages/room"
+@import "pages/room";
+@import "pages/profile";

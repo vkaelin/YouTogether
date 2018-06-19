@@ -2,6 +2,11 @@
 /*  Footer
  * ------------------------------ */
 .global-footer {
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  // width: 100vw;
+
   background: $black;
   color: $gray-3;
   // padding: ($pulse * 1) 0;
@@ -29,6 +34,11 @@
     display: flex;
     align-items: center;
   }
+}
+
+.svg-footer {
+  position: relative;
+  padding-bottom: $pulse*2;
 }
 
 .before--footer {

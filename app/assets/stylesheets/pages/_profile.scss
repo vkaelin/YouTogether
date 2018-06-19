@@ -1,0 +1,66 @@
+/* ------------------------------
+/*  Profile
+ * ------------------------------ */
+.profile-container {
+  position: relative;
+  z-index: 99;
+  margin: -$pulse*42 auto 0 auto;
+  padding: 0 0 $pulse*2 0;
+
+  .col-12:first-child {
+    border-right: 1px solid $gray-2;
+
+    @media screen and (max-width: 767px) {
+      border-right: none;
+    }
+  }
+
+  .text--center {
+    font-family: 'GT-Eesti', 'Lato', sans-serif;
+    border-bottom: 1px solid $gray-2;
+    padding: 0 0 $pulse 0;
+  }
+
+  .videos-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .video-link {
+      width: 100%;
+      margin: 0 $pulse $pulse 0;
+
+      .video-img {
+        max-width: 100%;
+      }
+
+      @include tablet {
+        float: left;
+        width: calc(50% - #{$pulse});
+      }
+
+      @include desktop {
+        width: calc(33% - #{$pulse});
+      }
+    }
+  }
+}
+
+.profile-btn {
+  margin: $pulse auto 0 auto;
+}
+
+.profile-svg path {
+  fill: $white;
+}
+
+@include tablet-big {
+  .push {
+    height: 76px;
+  }
+}
+
+@include desktop {
+  .profile-svg path {
+    fill: #324355;
+  }
+}
