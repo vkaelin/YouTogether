@@ -19,7 +19,7 @@
     <div class="row room">
       <div class="col-lg-2">
         <div class="room__col">
-          <h3 class="your-rooms">Your rooms</h3>
+          <h3 class="your-rooms"><%= t('playerpage.yourrooms') %></h3>
           <ul class="bare-list rooms-list">
             <li>Room n.1</li>
             <li>Room n.2</li>
@@ -48,8 +48,8 @@
               </div>
               <form action="post" id="change-url">
                 <div class="input-row">
-                  <input type="text" id="url" name="url" class="input-row__field" placeholder="Paste your YT link here">
-                  <button type="submit" class="btn--inline btn--primary">Change URL</button>
+                  <input type="text" id="url" name="url" class="input-row__field" placeholder="<%= t('playerpage.pastelink') %>">
+                  <button type="submit" class="btn--inline btn--primary"><%= t('playerpage.changeurl') %></button>
                 </div>
               </form>
               <span id="video-url" style="display: none;"><%= @url %></span>

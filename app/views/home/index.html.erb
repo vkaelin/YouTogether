@@ -4,11 +4,11 @@
 
       <div class="col-md-5">
         <div class="hero">
-          <h1 class="hero__title">Watch YouTube videos, differently.</h1>
-          <h3 class="hero__subtitle">With YouTogether, enjoy laughing at the same thing, at the same time.</h3>
+          <h1 class="hero__title"><%= t('homepage.title') %></h1>
+          <h3 class="hero__subtitle"><%= t('homepage.subtitle') %></h3>
           <div class="hero__footer">
-            <span class="hero__footer__join">Don't wait anymore, join us now!</span><a href="#" class="btn--secondary">Sign Up</a>
-            <p class="hero__footer__log">Or you can <a class="white-link" href="#">log in</a></p>
+            <span class="hero__footer__join"><%= t('homepage.dontwait') %></span><a href="#" class="btn--secondary"><%= t('signup') %></a>
+            <p class="hero__footer__log"><%= t('homepage.orlogin') %> <a class="white-link" href="#"><%= t('homepage.login') %></a></p>
           </div>
         </div>
       </div> <!-- /col-md-5 -->

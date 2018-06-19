@@ -3,7 +3,7 @@
     <label class="input-group__label sr-only" for="q">Find a room</label>
     <div class="input-row">
       <%= text_field_tag('q', nil, class: 'input-row__field', placeholder: 'e.g. "Valentin\'s room"') %>
-      <%= button_tag('Search', class: 'btn btn--inline btn--primary') %>
+      <%= button_tag(t('search'), class: 'btn btn--inline btn--primary') %>
     </div>
   </div>
 <% end %>

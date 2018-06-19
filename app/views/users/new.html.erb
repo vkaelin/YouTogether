@@ -4,8 +4,8 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Sign Up</h1>
-          <h3 class="hero__subtitle">Or <a  class="white-link" href="#">log in</a> if you have already an account.</h3>
+          <h1 class="hero__title"><%= t('signup') %></h1>
+          <h3 class="hero__subtitle"><%= t('signuppage.or') %> <a  class="white-link" href="#"><%= t('signuppage.login') %></a> <%= t('signuppage.alreadyhave') %></h3>
         </div>
 
         <section class="big-card">
@@ -29,7 +29,7 @@
                 <%= form.password_field(:password, class: 'input-group__field') %>
               </div>
               <div class="prompt">
-                <%= form.submit('Sign up', class: 'btn--primary btn-xl prompt__confirm') %>
+                <%= form.submit(t('signup'), class: 'btn--primary btn-xl prompt__confirm') %>
               </div>
             <% end %>
           </div>

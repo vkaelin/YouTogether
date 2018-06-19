@@ -1,0 +1,36 @@
+fr:
+  account: 'Mon compte'
+  homepage:
+    dontwait: "N'attendez plus, rejoignez nous!"
+    login: 'connectez-vous'
+    orlogin: 'Ou alors'
+    subtitle: "Grâce à YouTogether, rigolez aux mêmes blagues aux mêmes moments."
+    title: 'Regarder des vidéos YouTube, différement.'
+  login: 'Connexion'
+  loginpage:
+    or: 'Ou'
+    donthave: "si vous n'en avez pas encore."
+    signup: 'créez un compte'
+  logout: 'Deconnexion'
+  playerpage:
+    changeurl: 'Changer URL'
+    pastelink: 'Lien de la nouvelle vidéo'
+    yourrooms: 'Vos séances'
+  rooms: 'Séances'
+  roomspage:
+    create: 'Créer une séance'
+    orcreate: 'Ou créez une séance:'
+    search: 'Recherchez une séance:'
+  search: 'Rechercher'
+  signup: 'Inscription'
+  signuppage:
+    alreadyhave: "si vous avez déjà un compte."
+    login: 'connectez-vous'
+    or: 'Ou'
+  helpers:
+    label:
+      user:
+        email: 'Email'
+        name: 'Nom et prénom'
+        password: 'Mot de passe'
+        avatar: 'Avatar'

@@ -2,11 +2,6 @@
 /*  Footer
  * ------------------------------ */
 .global-footer {
-  // position: absolute;
-  // bottom: 0;
-  // left: 0;
-  // width: 100vw;
-
   background: $black;
   color: $gray-3;
   // padding: ($pulse * 1) 0;
@@ -49,4 +44,12 @@
   overflow: hidden;
 
   fill: #F5F7F9;
+}
+
+.languages {
+  font-size: 1.6em;
+
+  &__elem:first-child {
+    margin: 0 $pulse/2 0 0;
+  }
 }

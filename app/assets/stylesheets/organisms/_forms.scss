@@ -42,13 +42,12 @@
   .input-group--horizontal {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .input-group--horizontal .input-group__label,
   .input-group--horizontal > .field_with_errors {
     flex: 0 1 20%;
-    margin-top: 1.25rem;
   }
 
   .input-group--horizontal .input-group__field,

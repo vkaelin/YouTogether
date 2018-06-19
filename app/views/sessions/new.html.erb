@@ -4,8 +4,8 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Log in</h1>
-          <h3 class="hero__subtitle">Or <a  class="white-link" href="#">sign up</a> if you don't have an account.</h3>
+          <h1 class="hero__title"><%= t('login') %></h1>
+          <h3 class="hero__subtitle"><%= t('loginpage.or') %> <a  class="white-link" href="#"><%= t('loginpage.signup') %></a> <%= t('loginpage.donthave')%></h3>
         </div>
 
         <section class="big-card">
@@ -20,15 +20,15 @@
 
             <%= form_tag(sessions_path) do %>
               <div class="input-group--horizontal">
-                <%= label_tag(:email, nil, class: 'input-group__label') %>
+                <%= label_tag(:email, t('helpers.label.user.email'), class: 'input-group__label') %>
                 <%= text_field_tag(:email, nil, class: 'input-group__field', placeholder: 'e.g. me@epfl.ch') %>
               </div>
               <div class="input-group--horizontal">
-                <%= label_tag(:password, nil, class: 'input-group__label') %>
+                <%= label_tag(:password, t('helpers.label.user.password'), class: 'input-group__label') %>
                 <%= password_field_tag(:password, nil, class: 'input-group__field') %>
               </div>
               <div class="prompt">
-                <%= submit_tag('Log in', class: 'btn btn--primary  btn-xl prompt__confirm') %>
+                <%= submit_tag(t('login'), class: 'btn btn--primary  btn-xl prompt__confirm') %>
               </div>
             <% end %>
           </div>

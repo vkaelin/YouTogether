@@ -1,13 +1,13 @@
 <nav>
   <ul class="global-nav">
     <li class="global-nav__element">
-      <%= link_to('Rooms', rooms_path) %>
+      <%= link_to(t('rooms'), rooms_path) %>
     </li>
     <li class="global-nav__element">
-      <%= link_to('Account', account_path) %>
+      <%= link_to(t('account'), account_path) %>
     </li>
     <li class="global-nav__element">
-      <%= link_to('Log out', session_path(1), method: :delete) %>
+      <%= link_to(t('logout'), session_path(1), method: :delete) %>
     </li>
   </ul>
 </nav>

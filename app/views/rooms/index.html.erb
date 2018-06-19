@@ -4,12 +4,12 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Rooms</h1>
-          <h3 class="hero__subtitle m-b-sm">Search for a room:</h3>
+          <h1 class="hero__title"><%= t('rooms') %></h1>
+          <h3 class="hero__subtitle m-b-sm"><%= t('roomspage.search') %></h3>
           <%= render(partial: 'search_form') %>
 
           <div class="hero__footer">
-            <span class="hero__footer__join">Or create a room:</span><a href="#" class="btn--secondary">Create a room</a>
+            <span class="hero__footer__join"><%= t('roomspage.orcreate') %></span><a href="#" class="btn--secondary"><%= t('roomspage.create') %></a>
           </div>
         </div>
 
