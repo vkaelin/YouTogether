@@ -26,11 +26,11 @@
         <%= form_for(current_user, url: account_path, html: { class: '' }) do |form| %>
           <div class="input-group input-group--horizontal">
             <%= form.label(:email, class: 'input-group__label') %>
-            <%= form.text_field(:email, class: 'input-group__field', placeholder: 'e.g. me@epfl.cha') %>
+            <%= form.text_field(:email, class: 'input-group__field') %>
           </div>
           <div class="input-group input-group--horizontal">
             <%= form.label(:name, class: 'input-group__label') %>
-            <%= form.text_field(:name, class: 'input-group__field', placeholder: 'e.g. Diana Prince') %>
+            <%= form.text_field(:name, class: 'input-group__field') %>
           </div>
           <div class="input-group input-group--horizontal">
             <%= form.label(:avatar, class: 'input-group__label') %>
