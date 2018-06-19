@@ -24,21 +24,13 @@
               <span class="logo__name">ouTogether.</span>
             </a>
           </div>
-          <nav>
-            <ul class="global-nav">
-              <li class="global-nav__element">
-                <a href="#">Rooms</a>
-              </li>
-              <li class="global-nav__element">
-                <!-- <a href="#">Sign Up</a> -->
-                <%= link_to('Sign Up', signup_path) %>
-              </li>
-              <li class="global-nav__element">
-                <!-- <a href="#">Log in</a> -->
-                <%= link_to('Log in', login_path) %>
-              </li>
-            </ul>
-          </nav>
+
+          <% if(logged_in?) %>
+            <%= render(partial: 'authenticated_user_header') %>
+          <% else %>
+            <%= render(partial: 'anonymous_user_header') %>
+          <% end %>
+          
         </div>
       </div>
     </header>

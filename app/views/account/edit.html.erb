@@ -23,7 +23,7 @@
     <div class="big-card--extended">
       <div class="big-card__content">
 
-        <%= form_for(User.new, url: account_path, html: { class: '' }) do |form| %>
+        <%= form_for(current_user, url: account_path, html: { class: '' }) do |form| %>
           <div class="input-group input-group--horizontal">
             <%= form.label(:email, class: 'input-group__label') %>
             <%= form.text_field(:email, class: 'input-group__field', placeholder: 'e.g. me@epfl.cha') %>
