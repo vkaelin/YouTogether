@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById(tabName).style.display = "block";
       evt.target.classList.add("active");
     }
-    
+
 
     /* Reload the page when changing room and changing language to render the YT player */
     if (document.getElementById('ytplayer') != null) {
