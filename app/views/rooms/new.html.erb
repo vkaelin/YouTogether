@@ -4,8 +4,7 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Create your room</h1>
-          <!-- <h3 class="hero__subtitle">Or <a  class="white-link" href="#">sign up</a> if you don't have an account.</h3> -->
+          <h1 class="hero__title"><%= t('createroompage.title') %></h1>
         </div>
 
         <section class="big-card">
@@ -24,7 +23,7 @@
                 <%= form.text_field(:name, class: 'input-group__field', placeholder: 'e.g. "Valentin\'s room"') %>
               </div>
               <div class="prompt">
-                <%= submit_tag('Create room', class: 'btn btn--primary  btn-xl prompt__confirm') %>
+                <%= submit_tag(t('createroompage.createroom'), class: 'btn btn--primary  btn-xl prompt__confirm') %>
               </div>
             <% end %>
           </div>

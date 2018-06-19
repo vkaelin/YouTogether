@@ -1,5 +1,8 @@
 en:
   account: 'My account'
+  createroompage:
+    createroom: 'Create room'
+    title: 'Create your room'
   homepage:
     dontwait: "Don't wait anymore, join us now!"
     login: 'log in'
@@ -34,3 +37,5 @@ en:
         name: 'Name'
         password: 'Password'
         avatar: 'Avatar'
+      room:
+        name: 'Name'

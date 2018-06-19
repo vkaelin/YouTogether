@@ -1,5 +1,8 @@
 fr:
   account: 'Mon compte'
+  createroompage:
+    createroom: 'Créer votre séance'
+    title: 'Créer votre séance'
   homepage:
     dontwait: "N'attendez plus, rejoignez nous!"
     login: 'connectez-vous'
@@ -34,3 +37,5 @@ fr:
         name: 'Nom et prénom'
         password: 'Mot de passe'
         avatar: 'Avatar'
+      room:
+        name: 'Nom'
