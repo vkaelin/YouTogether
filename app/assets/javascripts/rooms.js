@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
     /* Tabs */
     var tabs = document.querySelector('.tab-header');
     tabs.addEventListener("click", function(e) {
-      openTab(e, e.target.innerText);
+      if (e.target.classList.contains("tablinks")) {
+        openTab(e, e.target.innerText);
+      }
     });
     document.getElementById("defaultOpen").click();
 
