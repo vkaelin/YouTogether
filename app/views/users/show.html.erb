@@ -22,10 +22,10 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <h2 class="text--center">Contact details</h2>
-            <p><b>Email:</b> valikaelin@gmail.com</p>
-            <p><b>Date of account creation:</b> 17/06/2018</p>
+            <p><b>Email:</b> <%= @user.email %></p>
+            <p><b>Date of account creation:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
             <div class="image-container">
-              <img class="avatar-profile" src="http://www.usanetwork.com/sites/usanetwork/files/styles/629x720/public/suits_cast_harvey.jpg" alt="random avatar picture" />
+              <img class="avatar-profile" src="<%= @user.avatar_url %>">
             </div>
           </div> <!-- /col-12 -->
           <div class="col-12 col-md-6">

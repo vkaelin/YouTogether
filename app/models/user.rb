@@ -7,6 +7,8 @@ class User < ApplicationRecord
   before_validation :downcase_email
   after_initialize :default_role!
 
+  mount_uploader :avatar, AvatarUploader
+
   private
 
   def downcase_email
