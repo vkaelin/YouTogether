@@ -9,11 +9,9 @@
 
         <section class="big-card">
           <div class="big-card__content">
-            <% if(flash.any?) %>
+            <% if(@room.errors.any?) %>
               <div class="alert alert--wide">
-                <% flash.each do |name, message| %>
-                  <div class="message <%= name %>"><%= message %></div>
-                <% end %>
+                <%= @room.errors.full_messages.join('<br />').html_safe %>
               </div>
             <% end %>
 
