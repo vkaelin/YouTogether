@@ -83,15 +83,15 @@
           <!-- Tab content -->
           <div id="Chat" class="tab-content">
 
-            <div class="messages" data-behavior='messages' data-room-id='2'>
-              <% 10.times do |message| %>
-                <div class="message"><strong>Valentin:</strong> Amazing man!</div>
+            <div class="messages" data-behavior='messages' data-room-id='<%= @room.id %>'>
+              <% @messages.each do |message| %>
+                <%= render(partial: 'message', locals: { message: message }) %>
               <% end %>
             </div>
 
-            <form action="">
-              <textarea class="input-group__field" name="name" rows="1" cols="80"></textarea>
-            </form>
+            <%= form_for [@room, Message.new] do |f| %>
+              <%= f.text_area :content, rows: 1, class: 'input-group__field' %>
+            <% end %>
 
             <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
           </div>
