@@ -1,6 +1,7 @@
 /* ------------------------------
 /*  Mixins
  * ------------------------------ */
+/* Width */
 @mixin phone {
   @media screen and (min-width: 480px) {
     @content;
@@ -27,6 +28,19 @@
 
 @mixin desktop {
   @media screen and (min-width: 1000px) {
+    @content;
+  }
+}
+
+/* Width and Height */
+@mixin tablet-vertical-height {
+  @media screen and (min-height: 600px) and (min-width: 600px) and (orientation:portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-big-height {
+  @media screen and (min-height: 900px) and (min-width: 768px) {
     @content;
   }
 }

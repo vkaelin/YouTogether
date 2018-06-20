@@ -37,12 +37,12 @@
     box-shadow: $shadow-2;
   }
 
-  @include tablet-vertical {
+  @include tablet-vertical-height {
     height: 90vh;
     padding-bottom: 0;
   }
 
-  @include tablet-big {
+  @include tablet-big-height {
     height: 90vh;
     padding-bottom: 0;
   }
