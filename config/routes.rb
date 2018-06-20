@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
     resources :rooms do
       resource :room_users
+      resources :messages
     end
 
     get 'signup', to: 'users#new'
