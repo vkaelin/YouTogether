@@ -3,7 +3,7 @@
     <div class="row masthead__row">
       <div class="col-12">
         <div class="hero text--center">
-          <h1 class="hero__title">Valentin's Room</h1>
+          <h1 class="hero__title"><%= @room.name %></h1>
         </div>
       </div> <!-- /col-12 -->
     </div> <!-- /row -->
@@ -21,10 +21,11 @@
         <div class="room__col">
           <h3 class="your-rooms"><%= t('playerpage.yourrooms') %></h3>
           <ul class="bare-list rooms-list">
-            <li>Room n.1</li>
-            <li>Room n.2</li>
-            <li>Room n.3</li>
-            <li>Room n.4</li>
+            <% current_user.rooms.each do |room| %>
+              <li>
+                <%= link_to(room.name, room_path(room), data: {behavior: "room-link", room_id: room.id}, class: 'black-link') %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div> <!-- /col-lg-2 -->
@@ -97,13 +98,9 @@
 
           <div id="Users" class="tab-content">
             <ol class="ordered-list">
-              <li>Valentin</li>
-              <li>Valentin</li>
-              <li>Valentin</li>
-              <li>Valentin</li>
-              <li>Valentin</li>
-              <li>Valentin</li>
-              <li>Valentin</li>
+              <% @room.users.each do |user| %>
+              <li><%= link_to(user.name, user_path(user), class: 'black-link') %></li>
+              <% end %>
             </ul>
             <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
           </div>

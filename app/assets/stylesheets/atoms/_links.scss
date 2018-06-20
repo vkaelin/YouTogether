@@ -9,3 +9,13 @@
     color: darken($white, 15);
   }
 }
+
+.black-link {
+  color: $black;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($black, 15);
+  }
+}

@@ -28,13 +28,18 @@
     <div class="big-card--extended">
       <div class="big-card__content">
 
-        <ul class="cards bare-list">
-          <% @rooms.each do |room| %>
-
-            <%= render(partial: 'room_card', locals: { room: room }) %>
-
+        <% if (@rooms.any?) %>
+          <% if(!@no_search) %>
+            <h2 class="text--center m-b-md">Results for "<%= @search_term %>"</h2>
           <% end %>
-        </ul>
+          <ul class="cards bare-list">
+            <% @rooms.each do |room| %>
+              <%= render(partial: 'room_card', locals: { room: room }) %>
+            <% end %>
+          </ul>
+        <% else %>
+          <h2 class="text--center m-b-md">No rooms found!</h2>
+        <% end %>
 
       </div>
     </div>

@@ -1,7 +1,8 @@
 class AccountController < ApplicationController
   before_action :ensure_authenticated
-  
+
   def edit
+    @rooms = current_user.rooms
   end
 
   def update

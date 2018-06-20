@@ -1,5 +1,10 @@
 en:
   account: 'My account'
+  accountpage:
+    joinedrooms: 'Your joined rooms'
+    norooms: 'You have joined no room yet!'
+    or: 'or'
+    updateaccount: 'Update account'
   createroompage:
     createroom: 'Create room'
     title: 'Create your room'
@@ -19,6 +24,10 @@ en:
     changeurl: 'Change URL'
     pastelink: 'Paste your YT link here'
     yourrooms: 'Your rooms'
+  roomcard:
+    join: 'Join'
+    joined: 'Joined'
+    leave: 'Leave'
   rooms: 'Rooms'
   roomspage:
     create: 'Create a room'

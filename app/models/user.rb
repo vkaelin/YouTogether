@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :email, uniqueness: true
-  validates :name, :presence => true
+  validates :name, presence: true
   validates :role, inclusion: { in: %w(registered admin) }
 
   before_validation :downcase_email

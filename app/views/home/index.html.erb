@@ -7,8 +7,8 @@
           <h1 class="hero__title"><%= t('homepage.title') %></h1>
           <h3 class="hero__subtitle"><%= t('homepage.subtitle') %></h3>
           <div class="hero__footer">
-            <span class="hero__footer__join"><%= t('homepage.dontwait') %></span><a href="#" class="btn--secondary"><%= t('signup') %></a>
-            <p class="hero__footer__log"><%= t('homepage.orlogin') %> <a class="white-link" href="#"><%= t('homepage.login') %></a></p>
+            <span class="hero__footer__join"><%= t('homepage.dontwait') %></span><%= link_to(t('signup'), signup_path, class: 'btn--secondary') %>
+            <p class="hero__footer__log"><%= t('homepage.orlogin') %> <%= link_to(t('homepage.login'), login_path, class: 'white-link') %></p>
           </div>
         </div>
       </div> <!-- /col-md-5 -->

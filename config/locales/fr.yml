@@ -1,5 +1,10 @@
 fr:
   account: 'Mon compte'
+  accountpage:
+    joinedrooms: 'Vos séances rejointes'
+    norooms: "Vous n'avez rejoint aucune séance!"
+    or: 'ou'
+    updateaccount: 'Modifier votre compte'
   createroompage:
     createroom: 'Créer votre séance'
     title: 'Créer votre séance'
@@ -14,11 +19,15 @@ fr:
     or: 'Ou'
     donthave: "si vous n'en avez pas encore."
     signup: 'créez un compte'
-  logout: 'Deconnexion'
+  logout: 'Déconnexion'
   playerpage:
     changeurl: 'Changer URL'
     pastelink: 'Lien de la nouvelle vidéo'
     yourrooms: 'Vos séances'
+  roomcard:
+    join: 'Rejoindre'
+    joined: 'Rejointe'
+    leave: 'Quitter'
   rooms: 'Séances'
   roomspage:
     create: 'Créer une séance'

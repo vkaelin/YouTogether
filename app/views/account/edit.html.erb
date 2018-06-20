@@ -37,7 +37,7 @@
             <%= form.file_field(:avatar, class: 'input-group__field') %>
           </div>
           <div class="prompt">
-            <%= form.submit('Update account', class: 'btn btn--primary prompt__confirm') %>
+            <%= form.submit(t('accountpage.updateaccount'), class: 'btn btn--primary prompt__confirm') %>
           </div>
         <% end %>
 
@@ -47,30 +47,22 @@
     <div class="big-card--extended">
       <div class="big-card__content">
 
-        <h2 class="text--center text--title">Your joined rooms</h2>
-        <ul class="cards bare-list">
-          <% 5.times do %>
+        <h2 class="text--center text--title"><%= t('accountpage.joinedrooms') %></h2>
 
-          <li class="card">
-            <a class="card__thumb" href="#">
-              <div class="card__thumb__tag tag--green">Joined</div>
-              <img src="http://fpoimg.com/255x170" alt="Random pic"/>
-              <div class="card__intro">
-                <h3 class="card__title">Valentin's Room</h3>
-              </div>
-            </a>
-            <form class="card__footer">
-              <button class="btn--flex btn--solo">
-                <svg class="icon" role="presentation">
-                  <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#done") %>"></use>
-                </svg>
-                Leave
-              </button>
-            </form>
-          </li>
-
-          <% end %>
-        </ul>
+        <% if (@rooms.any?) %>
+          <ul class="cards bare-list">
+            <% @rooms.each do |room| %>
+              <%= render(partial: 'room_card', locals: { room: room }) %>
+            <% end %>
+          </ul>
+        <% else %>
+        <div class="no-room text--center">
+          <h3><%= t('accountpage.norooms') %></h3>
+          <%= link_to(t('roomspage.search'), rooms_path, class: 'btn--primary') %>
+          <span><%= t('accountpage.or') %></span>
+          <%= link_to(t('roomspage.create'), new_room_path, class: 'btn--primary') %>
+        </div>
+        <% end %>
 
       </div>
     </div>
