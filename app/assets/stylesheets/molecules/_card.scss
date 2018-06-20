@@ -27,6 +27,7 @@
     width: 100%;
     display: block;
     border-radius: 8px 8px 0 0;
+    filter: brightness(0.4);
   }
 
   &__tag {
@@ -97,7 +98,7 @@
 
   .card {
     width: 100%;
-    
+
     @include tablet {
       float: left;
       width: calc(50% - #{$pulse});

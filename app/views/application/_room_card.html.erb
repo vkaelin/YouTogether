@@ -1,0 +1,17 @@
+<li class="card">
+  <%= link_to(room_path(room), class: 'card__thumb', method: :get) do %>
+    <%= render(partial: 'room_photo', locals: { url: room.video }) %>
+    <div class="card__thumb__tag tag--green">Joined</div>
+    <div class="card__intro">
+      <h3 class="card__title"><%= room.name %></h3>
+    </div>
+  <% end %>
+  <form class="card__footer">
+    <button class="btn--flex btn--solo">
+      <svg class="icon" role="presentation">
+        <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#done") %>"></use>
+      </svg>
+      Join
+    </button>
+  </form>
+</li>
