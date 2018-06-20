@@ -9,7 +9,9 @@ Rails.application.routes.draw do
 
     resources :sessions, only: [:new, :create, :destroy]
 
-    resources :rooms
+    resources :rooms do
+      resource :room_users
+    end
 
     get 'signup', to: 'users#new'
     get 'login', to: 'sessions#new'
