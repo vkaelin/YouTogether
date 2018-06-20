@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // Check we are on a room page
+  if (document.getElementById('ytplayer') != null) {
+
     var volumeSlider = document.querySelector('.volume');
 
     /* Volume slider on click */
@@ -62,16 +65,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     /* Reload the page when changing room and changing language to render the YT player */
-    if (document.getElementById('ytplayer') != null) {
-      var yourRooms = document.querySelector('.rooms-list');
-      yourRooms.addEventListener("click", function(e) {
-        location.reload();
-      });
-      var languages = document.querySelector('.languages');
-      languages.addEventListener("click", function(e) {
-        location.reload();
-      });
-    }
+    var yourRooms = document.querySelector('.rooms-list');
+    yourRooms.addEventListener("click", function(e) {
+      location.reload();
+    });
+    var languages = document.querySelector('.languages');
+    languages.addEventListener("click", function(e) {
+      location.reload();
+    });
+  }
 
 
 
