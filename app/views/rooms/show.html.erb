@@ -89,9 +89,9 @@
               <% end %>
             </div>
 
-            <%= form_for [@room, Message.new] do |f| %>
-              <%= f.text_area :content, rows: 1, class: 'input-group__field' %>
-            <% end %>
+            <form class="new_message" id="new_message">
+              <input class="input-group__field" type="text" id="message_content">
+            </form>
 
             <!-- <span onclick="this.parentElement.style.display='none'">x</span> -->
           </div>

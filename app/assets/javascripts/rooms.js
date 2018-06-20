@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+
   // Check we are on a room page
   if (document.getElementById('ytplayer') != null) {
 
-    var volumeSlider = document.querySelector('.volume');
-
     /* Volume slider on click */
+    var volumeSlider = document.querySelector('.volume');
     var volumeContainer = document.querySelector('.volume-container');
     volumeContainer.addEventListener("click", function(e) {
       var offset = this.getBoundingClientRect().left;
@@ -73,6 +73,22 @@ document.addEventListener("DOMContentLoaded", function() {
     languages.addEventListener("click", function(e) {
       location.reload();
     });
+
+
+    /* Send messages */
+    var roomId = document.querySelector("[data-behavior='messages']").getAttribute('data-room-id');
+    var sendMessage = document.querySelector('#new_message');
+    sendMessage.addEventListener("submit", function(e) {
+      e.preventDefault();
+      var content = document.querySelector('#message_content');
+      App.rooms.send_message(roomId, content.value);
+      content.value = '';
+    });
+    var messagesContainer = document.querySelector('.messages');
+    messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to last messages
+
+
+
   }
 
 
