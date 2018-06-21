@@ -7,6 +7,36 @@
           <h1 class="hero__title"><%= t('userpage.profile') %> <%= @user.name%></h1>
         </div>
 
+        <div class="container">
+          <div class="profile-container">
+            <section class="big-card--extended">
+              <div class="big-card__content">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <h2 class="text--center"><%= t('userpage.details') %></h2>
+                    <p><b><%= t('userpage.name') %>:</b> <%= @user.name %></p>
+                    <p><b><%= t('userpage.date') %>:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
+                    <div class="image-container">
+                      <img class="avatar-profile" src="<%= @user.avatar_url %>">
+                    </div>
+                  </div> <!-- /col-12 -->
+                  <div class="col-12 col-md-6">
+                    <h2 class="text--center"><%= t('userpage.favorite') %></h2>
+                    <div class="videos-container">
+                      <% 5.times do %>
+                        <a class="video-link" href="https://youtube.com/watch?v=eH4F1Tdb040">
+                          <img class="video-img" src="https://img.youtube.com/vi/eH4F1Tdb040/hqdefault.jpg" alt="yt video img">
+                        </a>
+                      <% end %>
+                    </div>
+                  </div> <!-- /col-12 -->
+                  <%= link_to(t('userpage.backtorooms'), rooms_path, class: 'btn--primary profile-btn') %>
+                </div> <!-- /row -->
+              </div>
+            </section>
+          </div> <!-- /profile-container -->
+        </div> <!-- /container -->
+
       </div> <!-- /col-12 -->
     </div> <!-- /row -->
     <svg class="masthead__end profile-svg" width="2000px" height="80px" viewBox="0 0 2000 80">
@@ -14,34 +44,3 @@
     </svg>
   </div> <!-- /container -->
 </div> <!-- /masthead -->
-
-<div class="container">
-  <div class="profile-container">
-    <section class="big-card--extended">
-      <div class="big-card__content">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <h2 class="text--center"><%= t('userpage.details') %></h2>
-            <p><b><%= t('userpage.name') %>:</b> <%= @user.name %></p>
-            <p><b><%= t('userpage.date') %>:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
-            <div class="image-container">
-              <img class="avatar-profile" src="<%= @user.avatar_url %>">
-            </div>
-          </div> <!-- /col-12 -->
-          <div class="col-12 col-md-6">
-            <h2 class="text--center"><%= t('userpage.favorite') %></h2>
-            <div class="videos-container">
-              <% 5.times do %>
-                <a class="video-link" href="https://youtube.com/watch?v=eH4F1Tdb040">
-                  <img class="video-img" src="https://img.youtube.com/vi/eH4F1Tdb040/hqdefault.jpg" alt="yt video img">
-                </a>
-              <% end %>
-            </div>
-          </div> <!-- /col-12 -->
-          <%= link_to(t('userpage.backtorooms'), rooms_path, class: 'btn--primary profile-btn') %>
-        </div> <!-- /row -->
-      </div>
-    </section>
-  </div> <!-- /profile-container -->
-</div> <!-- /container -->
-<div class="push"></div>

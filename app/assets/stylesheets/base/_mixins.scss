@@ -34,7 +34,7 @@
 
 /* Width and Height */
 @mixin tablet-vertical-height {
-  @media screen and (min-height: 600px) and (min-width: 600px) and (orientation:portrait) {
+  @media screen and (min-height: 900px) and (min-width: 600px) and (orientation:portrait) {
     @content;
   }
 }
