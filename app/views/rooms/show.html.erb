@@ -7,7 +7,7 @@
 
           <div class="btn--red" id="is-sync">
             <i class="fa fa-times"></i>
-            Not synchronized
+            <%= t('playerpage.notsynchronized') %>
           </div>
 
         </div>
@@ -53,13 +53,16 @@
                 <div class="btn--primary" id="sync" data-used="false">Sync</div>
                 <div class="btn" id="time">0:00</div>
               </div>
+              <div class="alerts" id="errors" style="visibility: hidden;">
+                <%= t('playerpage.notvalid') %>
+              </div>
               <form action="post" id="change-url">
                 <div class="input-row">
                   <input type="text" id="url" name="url" class="input-row__field" placeholder="<%= t('playerpage.pastelink') %>">
                   <button type="submit" class="btn--inline btn--primary"><%= t('playerpage.changeurl') %></button>
                 </div>
               </form>
-              <span id="video-url" style="display: none;"><%= @url %></span>
+              <span id="video-url" style="display: none;"><%= @room.video %></span>
             </div>
 
           </div>

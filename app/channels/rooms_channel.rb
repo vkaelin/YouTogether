@@ -21,6 +21,14 @@ class RoomsChannel < ApplicationCable::Channel
     logger.info("*****************************")
     @room = Room.find(data["room_id"])
 
+    if data['control'].include? 'url:'
+      logger.info("*****************************")
+      logger.info('INJECT URL')
+      logger.info("*****************************")
+      @room.video = data['control']
+      @room.save
+    end
+
     ActionCable.server.broadcast "rooms:#{@room.id}", {
       control: data['control'],
       room_id: data['room_id']

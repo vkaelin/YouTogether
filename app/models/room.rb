@@ -3,7 +3,7 @@ class Room < ApplicationRecord
   has_many :messages
 
   validates :name, presence: true
-  validates :name, length: { maximum: 30 }
+  validates :name, length: { maximum: 20 }
 
   scope :search,  ->(search_term) { where('name LIKE ?', "%#{search_term}%") }
 end

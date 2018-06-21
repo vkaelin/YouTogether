@@ -53,8 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
     sendMessage.addEventListener('submit', function(e) {
       e.preventDefault();
       var content = document.querySelector('#message_content');
-      App.rooms.send_message(roomId, content.value);
-      content.value = '';
+      if (content.value != '') {
+        App.rooms.send_message(roomId, content.value);
+        content.value = '';
+      }
     });
     var messagesContainer = document.querySelector('.messages');
     messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to last messages
@@ -134,6 +136,37 @@ document.addEventListener('DOMContentLoaded', function() {
     videoProgress.addEventListener('click', function(e) {
       offset = this.getBoundingClientRect().left;
       App.rooms.video_controllers(roomId, (e.pageX - offset).toString());
+    });
+
+
+    /* ------------------------------
+    /*  Change URL of video
+     * ------------------------------ */
+    var changeURL = document.querySelector('#change-url');
+    changeURL.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var content = document.querySelector('#url');
+      console.log(content.value);
+
+      regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+      match = content.value.match(regExp);
+      if (match && match[2].length == 11) {
+        console.log("url:" + match[2]);
+        App.rooms.video_controllers(roomId, "url:" + match[2]);
+        content.value = '';
+      } else {
+        console.log("error in regex");
+        var error = document.querySelector('#errors');
+        error.style.visibility = 'visible';
+        //error.classList.remove('hidden');
+        setTimeout(() => error.style.visibility = 'hidden', 3000);
+        //setTimeout(() => error.classList.add('hidden'), 3000);
+
+        // $errors = $('#errors')
+        // $errors.slideDown()
+        // setTimeout((-> $errors.slideUp()), 3000)
+      }
+
     });
 
 

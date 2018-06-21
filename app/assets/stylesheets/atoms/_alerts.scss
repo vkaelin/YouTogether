@@ -1,0 +1,15 @@
+/* ------------------------------
+/*  Alerts
+ * ------------------------------ */
+ .alerts {
+   background-color: lighten($red, 5);
+   color: #59030B;
+   border: 1px solid $red;
+   border-radius: 4px;
+
+   padding: $pulse/2;
+   margin: 0 0 $pulse 0;
+
+   font-size: 1.6em;
+   text-align: center;
+ }

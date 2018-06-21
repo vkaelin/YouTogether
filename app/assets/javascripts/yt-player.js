@@ -8,17 +8,15 @@ document.addEventListener("DOMContentLoaded", function() {
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-
   var duration;
   var vidClock;
-  // var url = $('#video-url').text().substr(4);
-  // console.log("URL BEFORE CHECK : " + url);
-  // if (!url) {
+
+  var url = document.querySelector('#video-url').innerText.substr(4);
+  console.log("URL BEFORE CHECK : " + url);
+  if (!url) {
     url = 'JTCinZpPeOU';
-  // }
-  // console.log("URL FINAL : " + url);
+  }
+  console.log("URL FINAL : " + url);
 
   window.onYouTubePlayerAPIReady = function() {
     player = new YT.Player('ytplayer', {
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-      // event.target.playVideo();
       player.addEventListener('onStateChange', function(state) {
         handleState(state.data);
       });
@@ -49,32 +46,11 @@ document.addEventListener("DOMContentLoaded", function() {
     //    the player should play for six seconds and then stop.
     var done = false;
     function onPlayerStateChange(event) {
-      // if (event.data == YT.PlayerState.PLAYING && !done) {
-      //   setTimeout(stopVideo, 6000);
-      //   done = true;
-      // }
       document.getElementById( "title" ).innerText = player.getVideoData().title;
     }
     function stopVideo() {
       player.stopVideo();
     }
-
-    // var pauseButton = document.querySelector('#pause');
-    // pauseButton.addEventListener('click', function() {
-    //   player.pauseVideo();
-    // });
-    //
-    // var playButton = document.querySelector('#play');
-    // playButton.addEventListener('click', function() {
-    //   player.playVideo();
-    // });
-
-    // var progressBar = document.querySelector('.progress-container');
-    // progressBar.addEventListener('click', function(e) {
-    //   console.log(e.pageX);
-    //   console.log("TOTAL:" + progressBar.offsetWidth);
-    //   player.seekTo(e.pageX * player.getDuration() / progressBar.offsetWidth);
-    // });
   }
 
   function handleState(state) {
@@ -103,8 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
       clearInterval(vidClock);
     }
   }
-
-
 
   function getTime(time) {
       var hours = ~~(time / 3600);

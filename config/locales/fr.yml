@@ -22,6 +22,8 @@ fr:
   logout: 'Déconnexion'
   playerpage:
     changeurl: 'Changer URL'
+    notsynchronized: 'Pas synchronisé'
+    notvalid: "Le lien de la vidéo n'est pas valide!"
     pastelink: 'Lien de la nouvelle vidéo'
     yourrooms: 'Vos séances'
   roomcard:

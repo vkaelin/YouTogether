@@ -21,20 +21,22 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
         console.log('sync');
         player.seekTo(0);
         var syncInfo = document.querySelector('#is-sync');
-        syncInfo.innerHTML = '<i class="fa fa-check"></i> Synchronized!';
+        syncInfo.innerHTML = '<i class="fa fa-check"></i> Sync!';
         syncInfo.className = 'btn--primary';
+      } else if (data.control.includes("url:")) {
+        console.log("DOWN THERE");
+        console.log(data.control.substr(4));
+        player.loadVideoById(data.control.substr(4));
       } else {
         var progressBar = document.querySelector('.progress-container');
         console.log(parseFloat(data.control));
         player.seekTo(parseFloat(data.control) * player.getDuration() / progressBar.offsetWidth);
       }
-
       return;
-    }
+    } // End of video controllers
 
     var activeRoom = document.querySelector("[data-behavior='messages'][data-room-id='" + data.room_id + "']");
     console.log(activeRoom);
-
     if(activeRoom != null) {
       console.log("APPEND");
       activeRoom.innerHTML += data.message;

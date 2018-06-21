@@ -22,6 +22,8 @@ en:
   logout: 'Log out'
   playerpage:
     changeurl: 'Change URL'
+    notsynchronized: 'Not synchronized'
+    notvalid: 'Your video URL is not valid!'
     pastelink: 'Paste your YT link here'
     yourrooms: 'Your rooms'
   roomcard:

@@ -25,7 +25,6 @@ class RoomsController < ApplicationController
 
   def show
     @messages = @room.messages.order(created_at: :desc).limit(100).reverse
-    @url = @room.video
   end
 
   private
