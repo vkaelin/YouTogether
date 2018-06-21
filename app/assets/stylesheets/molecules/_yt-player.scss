@@ -19,8 +19,6 @@
 
 /* Time and volume bars */
 .bars {
-  // margin: $pulse 0 0 0;
-
   &__row {
     display: flex;
     align-items: center;
@@ -63,7 +61,6 @@
     background: linear-gradient(-90deg, #5846C4, #7A6ADC);
   }
 }
-
 
 #ytplayer {
   pointer-events: none;

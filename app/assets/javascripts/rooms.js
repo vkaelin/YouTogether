@@ -127,6 +127,15 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 50);
     });
 
+    /* ------------------------------
+    /*  Video progress slider on click
+     * ------------------------------ */
+    var videoProgress = document.querySelector('.progress-container');
+    videoProgress.addEventListener('click', function(e) {
+      offset = this.getBoundingClientRect().left;
+      App.rooms.video_controllers(roomId, (e.pageX - offset).toString());
+    });
+
 
 
 

@@ -23,6 +23,10 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
         var syncInfo = document.querySelector('#is-sync');
         syncInfo.innerHTML = '<i class="fa fa-check"></i> Synchronized!';
         syncInfo.className = 'btn--primary';
+      } else {
+        var progressBar = document.querySelector('.progress-container');
+        console.log(parseFloat(data.control));
+        player.seekTo(parseFloat(data.control) * player.getDuration() / progressBar.offsetWidth);
       }
 
       return;
