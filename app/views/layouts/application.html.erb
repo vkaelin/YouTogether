@@ -47,13 +47,7 @@
           <svg class="icon--sentence" role="presentation">
             <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#heart") %>"></use>
           </svg>
-          by Valentin K.</p>
-        <!-- <div class="logo--negativ">
-          <a href="/">
-            <span class="logo__letter">Y</span>
-            <span class="logo__name">ouTogether.</span>
-          </a>
-        </div> -->
+          by Valentin Kaelin</p>
         <div class="languages">
           <% I18n.available_locales.each do |locale| %>
             <%= link_to(locale.capitalize, url_for(locale: locale), class: "languages__elem") %>

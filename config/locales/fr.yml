@@ -41,6 +41,13 @@ fr:
     alreadyhave: "si vous avez déjà un compte."
     login: 'connectez-vous'
     or: 'Ou'
+  userpage:
+    backtorooms: 'Retourner aux séances'
+    date: 'Date de création de compte'
+    details: 'Coordonnées'
+    favorite: 'Vidéos favorites'
+    name: 'Nom'
+    profile: 'Profil de'
   helpers:
     label:
       user:

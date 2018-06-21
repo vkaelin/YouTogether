@@ -41,6 +41,13 @@ en:
     alreadyhave: "if you have already an account."
     login: 'log in'
     or: 'Or'
+  userpage:
+    backtorooms: 'Go back to rooms'
+    date: 'Date of account creation'
+    details: 'Contact details'
+    favorite: 'Favorite videos'
+    name: 'Name'
+    profile: 'Profile of'
   helpers:
     label:
       user:

@@ -29,7 +29,7 @@
           <ul class="bare-list rooms-list">
             <% current_user.rooms.each do |room| %>
               <li>
-                <%= link_to(room.name, room_path(room), data: {behavior: "room-link", room_id: room.id}, class: 'black-link') %>
+                <%= link_to(room.name, room_path(room), data: {behavior: "room-link", room_id: room.id}, class: 'black-link', method: :get) %>
               </li>
             <% end %>
           </ul>

@@ -4,7 +4,7 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title">Valentin's Profile</h1>
+          <h1 class="hero__title"><%= t('userpage.profile') %> <%= @user.name%></h1>
         </div>
 
       </div> <!-- /col-12 -->
@@ -21,15 +21,15 @@
       <div class="big-card__content">
         <div class="row">
           <div class="col-12 col-md-6">
-            <h2 class="text--center">Contact details</h2>
-            <p><b>Name:</b> <%= @user.name %></p>
-            <p><b>Date of account creation:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
+            <h2 class="text--center"><%= t('userpage.details') %></h2>
+            <p><b><%= t('userpage.name') %>:</b> <%= @user.name %></p>
+            <p><b><%= t('userpage.date') %>:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
             <div class="image-container">
               <img class="avatar-profile" src="<%= @user.avatar_url %>">
             </div>
           </div> <!-- /col-12 -->
           <div class="col-12 col-md-6">
-            <h2 class="text--center">Favorite videos</h2>
+            <h2 class="text--center"><%= t('userpage.favorite') %></h2>
             <div class="videos-container">
               <% 5.times do %>
                 <a class="video-link" href="https://youtube.com/watch?v=eH4F1Tdb040">
@@ -38,7 +38,7 @@
               <% end %>
             </div>
           </div> <!-- /col-12 -->
-          <a class="btn--primary profile-btn" href="#">Go back to rooms</a>
+          <%= link_to(t('userpage.backtorooms'), rooms_path, class: 'btn--primary profile-btn') %>
         </div> <!-- /row -->
       </div>
     </section>

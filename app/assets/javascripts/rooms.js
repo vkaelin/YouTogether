@@ -33,12 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     /* ------------------------------
-    /*  Reload page when changing room and changing language to render the YT player
+    /*  Reload page when changing language to render the YT player
      * ------------------------------ */
-    var yourRooms = document.querySelector('.rooms-list');
-    yourRooms.addEventListener('click', function(e) {
-      location.reload();
-    });
     var languages = document.querySelector('.languages');
     languages.addEventListener('click', function(e) {
       location.reload();
