@@ -1,4 +1,8 @@
 Rails.application.configure do
+  # Use Websocket in production
+  config.web_socket_server_url = "wss://youtogether.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://youtogether.herokuapp.com', 'http://youtogether.herokuapp.com']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

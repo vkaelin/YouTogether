@@ -6,5 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: youtogether_production
+  url: redis://redistogo:2d9a590131f0e10c3713d8bfa6082395@cod.redistogo.com:11177/
