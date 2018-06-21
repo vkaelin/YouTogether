@@ -72,3 +72,17 @@
   padding: $pulse*2 0 $pulse*3 0;
   min-height: 75vh; // TODO: CHANGE IT
 }
+
+.hero-room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero__title {
+    margin: 0;
+  }
+
+  #is-sync {
+    margin: 0 0 0 $pulse;
+  }
+}

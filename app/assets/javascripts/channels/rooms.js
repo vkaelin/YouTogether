@@ -11,6 +11,23 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
 
     console.log("RECIEVED");
 
+    var playerId = document.querySelector('#ytplayer').getAttribute('data-room-id');
+    if (playerId == data.room_id && data.control != undefined) {
+      if (data.control == 'play') {
+        player.playVideo();
+      } else if (data.control == 'pause') {
+        player.pauseVideo();
+      } else if (data.control == 'sync') {
+        console.log('sync');
+        player.seekTo(0);
+        var syncInfo = document.querySelector('#is-sync');
+        syncInfo.innerHTML = '<i class="fa fa-check"></i> Synchronized!';
+        syncInfo.className = 'btn--primary';
+      }
+
+      return;
+    }
+
     var activeRoom = document.querySelector("[data-behavior='messages'][data-room-id='" + data.room_id + "']");
     console.log(activeRoom);
 
@@ -30,6 +47,13 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
     return this.perform("send_message", {
       room_id: room_id,
       content: message
+    });
+  },
+
+  video_controllers: function(room_id, message) {
+    return this.perform("video_controllers", {
+      room_id: room_id,
+      control: message
     });
   }
 

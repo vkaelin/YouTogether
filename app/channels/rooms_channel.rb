@@ -14,4 +14,16 @@ class RoomsChannel < ApplicationCable::Channel
     message = @room.messages.create(content: data["content"], user: current_user)
     MessageRelayJob.perform_later(message)
   end
+
+  def video_controllers(data)
+    logger.info("*****************************")
+    logger.info(data['control'])
+    logger.info("*****************************")
+    @room = Room.find(data["room_id"])
+
+    ActionCable.server.broadcast "rooms:#{@room.id}", {
+      control: data['control'],
+      room_id: data['room_id']
+    }
+  end
 end

@@ -2,8 +2,14 @@
   <div class="container masthead__container">
     <div class="row masthead__row">
       <div class="col-12">
-        <div class="hero text--center">
+        <div class="hero hero-room text--center">
           <h1 class="hero__title"><%= @room.name %></h1>
+
+          <div class="btn--red" id="is-sync">
+            <i class="fa fa-times"></i>
+            Not synchronized
+          </div>
+
         </div>
       </div> <!-- /col-12 -->
     </div> <!-- /row -->
@@ -39,7 +45,7 @@
           </div>
           <div class="controls">
 
-            <div id="ytplayer"></div>
+            <div id="ytplayer" data-room-id='<%= @room.id %>'></div>
             <div class="second-col">
               <div class="btn-container">
                 <div class="btn--primary" id="play">Play</div>

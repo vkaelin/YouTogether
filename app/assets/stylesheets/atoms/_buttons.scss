@@ -61,6 +61,22 @@
   }
 }
 
+.btn--red {
+  @extend .btn;
+  background-color: $red;
+  color: $white;
+  border: 1px solid $red;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($red, 5);
+    border-color: darken($red, 5);
+    color: $white;
+    transition: background 0.1s ease-in;
+  }
+}
+
 .btn--flex {
   @extend .btn;
   display: flex;
