@@ -13,6 +13,7 @@
 
   &__container {
     margin-top: $pulse*10;
+    overflow: hidden;
   }
 
   &__end {
