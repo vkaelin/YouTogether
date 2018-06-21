@@ -5,6 +5,7 @@
   margin: 0 0 ($pulse * 3) 0;
   // border-bottom: 1px solid $gray-1;
 
+
   .container {
     display: flex;
     align-items: center;
@@ -30,11 +31,11 @@
     padding: $pulse;
   }
 
-  // @include tablet{
+  @include tablet{
     nav {
       flex: 1 0 auto;
     }
-  // }
+  }
 }
 
 /* Header when scrolling */
