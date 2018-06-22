@@ -1,11 +1,18 @@
 fr:
   account: 'Mon compte'
   accountpage:
+    addfavorite: 'Ajouter une vidéo à vos favorites'
     favorites: 'Vidéos favorites'
     joinedrooms: 'Vos séances rejointes'
+    nofavorite: "Vous n'avez aucune vidéo favorite pour le moment!"
     norooms: "Vous n'avez rejoint aucune séance!"
     or: 'ou'
     updateaccount: 'Modifier votre compte'
+  createfavoritepage:
+    add: 'Ajouter'
+    placeholder: 'Collez ici le lien de la vidéo YouTube'
+    subtitle: 'Seules les vidéos YouTube sont autorisées.'
+    title: 'Ajouter une vidéo à vos favorites'
   createroompage:
     createroom: 'Créer votre séance'
     title: 'Créer votre séance'
@@ -48,6 +55,7 @@ fr:
     details: 'Coordonnées'
     favorite: 'Vidéos favorites'
     name: 'Nom'
+    nofavorite: "Cet utilisateur n'a aucune vidéo favorite."
     profile: 'Profil de'
   helpers:
     label:

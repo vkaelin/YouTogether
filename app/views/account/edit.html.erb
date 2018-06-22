@@ -65,29 +65,25 @@
         <% end %>
 
       </div>
-    </div> <!-- /big-card--extended -->
+    </div> <!-- /big-card-extended -->
 
     <div class="big-card--extended">
-      <div class="big-card__content">
+      <div class="big-card__content text--center">
 
-        <h2 class="text--center text--title"><%= t('accountpage.favorites') %></h2>
+        <h2 class="text--title"><%= t('accountpage.favorites') %></h2>
 
         <% if (current_user.favorite_videos.any?) %>
-          <ul class="cards bare-list">
+          <div class="videos-container">
             <% current_user.favorite_videos.each do |video| %>
-              <p>One video <%= video.url %></p>
+              <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
             <% end %>
-          </ul>
+          </div>
         <% else %>
-        <div class="no-room text--center">
-          <h3><%= t('accountpage.norooms') %></h3>
-          <%= link_to(t('roomspage.search'), rooms_path, class: 'btn--primary') %>
-          <span><%= t('accountpage.or') %></span>
-          <%= link_to(t('roomspage.create'), new_room_path, class: 'btn--primary') %>
+        <div>
+          <h3><%= t('accountpage.nofavorite') %></h3>
         </div>
         <% end %>
-
-        <%= link_to('Add a favorite video', new_user_favorite_videos_path(current_user), class: 'btn--primary') %>
+        <%= link_to(t('accountpage.addfavorite'), new_user_favorite_videos_path(current_user), class: 'btn--primary') %>
 
       </div>
     </div>

@@ -1,11 +1,18 @@
 en:
   account: 'My account'
   accountpage:
+    addfavorite: 'Add a favorite video'
     favorites: 'Favorite videos'
     joinedrooms: 'Your joined rooms'
+    nofavorite: 'You have no favorite videos for now!'
     norooms: 'You have joined no room yet!'
     or: 'or'
     updateaccount: 'Update account'
+  createfavoritepage:
+    add: 'Add'
+    placeholder: 'Paste YouTube link here'
+    subtitle: 'Only YouTube videos are allowed.'
+    title: 'Add a favorite video'
   createroompage:
     createroom: 'Create room'
     title: 'Create your room'
@@ -48,6 +55,7 @@ en:
     details: 'Contact details'
     favorite: 'Favorite videos'
     name: 'Name'
+    nofavorite: 'This user has no favorite videos.'
     profile: 'Profile of'
   helpers:
     label:

@@ -4,24 +4,27 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title"><%= t('signup') %></h1>
-          <h3 class="hero__subtitle"><%= t('signuppage.or') %> <a  class="white-link" href="#"><%= t('signuppage.login') %></a> <%= t('signuppage.alreadyhave') %></h3>
+          <h1 class="hero__title"><%= t('createfavoritepage.title') %></h1>
+          <h3 class="hero__subtitle"><%= t('createfavoritepage.subtitle') %></h3>
         </div>
 
         <section class="big-card">
           <div class="big-card__content">
-            <% if(@favorite.errors.any?) %>
+            <% if(flash.any?) %>
               <div class="alert alert--wide">
-                <%= @favorite.errors.full_messages.join('<br />').html_safe %>
+                <% flash.each do |name, message| %>
+                  <div class="message <%= name %>"><%= message %></div>
+                <% end %>
               </div>
             <% end %>
+
             <%= form_for([current_user, @favorite]) do |form| %>
               <div class="input-group--horizontal">
                 <%= form.label(:url, class: 'input-group__label') %>
-                <%= form.text_field(:url, class: 'input-group__field', placeholder:'Paste your video url here') %>
+                <%= form.text_field(:url, class: 'input-group__field', placeholder: t('createfavoritepage.placeholder')) %>
               </div>
               <div class="prompt">
-                <%= form.submit(t('signup'), class: 'btn--primary btn-xl prompt__confirm') %>
+                <%= form.submit(t('createfavoritepage.add'), class: 'btn--primary btn-xl prompt__confirm') %>
               </div>
             <% end %>
           </div>

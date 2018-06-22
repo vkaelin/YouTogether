@@ -6,12 +6,26 @@ class FavoriteVideosController < ApplicationController
   end
 
   def create
-    @favorite = current_user.favorite_videos.new(favorite_params)
+    url = favorite_params[:url]
+    regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+    match = url.match(regExp);
+
+    if (match && match[2].length == 11)
+      logger.info("url:" + match[2]);
+      logger.info("good url up *************************")
+    else
+      @favorite = FavoriteVideo.new
+      flash.now[:alert] = "The link of the video is invalid. Please try again"
+      render 'new'
+      return
+    end
+
+    @favorite = current_user.favorite_videos.new(url: match[2])
     @favorite.user = current_user
-    @favorite.save
     if(@favorite.save)
       redirect_to(account_path)
     else
+      flash.now[:alert] = "The link of the video is invalid. Please try again"
       render 'new'
     end
   end

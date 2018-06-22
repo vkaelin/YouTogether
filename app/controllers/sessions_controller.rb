@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to(rooms_path)
     else
-      flash[:alert] = "Email or password were invalid. Please try again"
+      flash.now[:alert] = "Email or password were invalid. Please try again"
       render 'new'
     end
   end
