@@ -16,7 +16,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if (@room.save)
-      session[:room_id] = @room.id
+      @room.users << current_user
       redirect_to(room_path(@room))
     else
       render 'new'
