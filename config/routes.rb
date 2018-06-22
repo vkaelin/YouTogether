@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   scope '/:locale' do
     root to: 'home#index'
 
-    resources :users
+    resources :users do
+      resource :favorite_videos, only: [:new, :create]
+    end
 
     resources :sessions, only: [:new, :create, :destroy]
 

@@ -1,6 +1,7 @@
 fr:
   account: 'Mon compte'
   accountpage:
+    favorites: 'Vidéos favorites'
     joinedrooms: 'Vos séances rejointes'
     norooms: "Vous n'avez rejoint aucune séance!"
     or: 'ou'

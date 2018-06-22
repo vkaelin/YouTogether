@@ -1,0 +1,36 @@
+<div class="masthead--inversed">
+  <div class="container masthead__container">
+    <div class="row masthead__row">
+      <div class="col-12">
+
+        <div class="hero text--center">
+          <h1 class="hero__title"><%= t('signup') %></h1>
+          <h3 class="hero__subtitle"><%= t('signuppage.or') %> <a  class="white-link" href="#"><%= t('signuppage.login') %></a> <%= t('signuppage.alreadyhave') %></h3>
+        </div>
+
+        <section class="big-card">
+          <div class="big-card__content">
+            <% if(@favorite.errors.any?) %>
+              <div class="alert alert--wide">
+                <%= @favorite.errors.full_messages.join('<br />').html_safe %>
+              </div>
+            <% end %>
+            <%= form_for([current_user, @favorite]) do |form| %>
+              <div class="input-group--horizontal">
+                <%= form.label(:url, class: 'input-group__label') %>
+                <%= form.text_field(:url, class: 'input-group__field', placeholder:'Paste your video url here') %>
+              </div>
+              <div class="prompt">
+                <%= form.submit(t('signup'), class: 'btn--primary btn-xl prompt__confirm') %>
+              </div>
+            <% end %>
+          </div>
+        </section>
+
+      </div> <!-- /col-12 -->
+    </div> <!-- /row -->
+    <svg class="masthead__end" width="2000px" height="80px" viewBox="0 0 2000 80">
+      <path d="M1998.40399,81.0534291 C2044.91797,81.0534291 1067.60163,-101.316786 0,81.0534291 C42.4171131,81.0534291 1951.89001,81.0534291 1998.40399,81.0534291 Z" fill="#324355" fill-rule="evenodd"></path>
+    </svg>
+  </div> <!-- /container -->
+</div> <!-- /masthead -->

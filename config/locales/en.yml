@@ -1,6 +1,7 @@
 en:
   account: 'My account'
   accountpage:
+    favorites: 'Favorite videos'
     joinedrooms: 'Your joined rooms'
     norooms: 'You have joined no room yet!'
     or: 'or'
