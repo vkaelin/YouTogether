@@ -1,5 +1,9 @@
 class FavoriteVideosController < ApplicationController
+  include RolesHelper
+
   before_action :ensure_authenticated
+  before_action :load_favorite,                 only: [:destroy]
+  before_action :authorize_to_delete_favorite,  only: [:destroy]
 
   def new
     @favorite = FavoriteVideo.new
@@ -10,10 +14,7 @@ class FavoriteVideosController < ApplicationController
     regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
     match = url.match(regExp);
 
-    if (match && match[2].length == 11)
-      logger.info("url:" + match[2]);
-      logger.info("good url up *************************")
-    else
+    unless (match && match[2].length == 11)
       @favorite = FavoriteVideo.new
       flash.now[:alert] = "The link of the video is invalid. Please try again"
       render 'new'
@@ -30,9 +31,22 @@ class FavoriteVideosController < ApplicationController
     end
   end
 
+  def destroy
+    @favorite = FavoriteVideo.find(params[:id])
+    current_user.favorite_videos.destroy(@favorite)
+  end
+
   private
 
   def favorite_params
     params.require(:favorite_video).permit(:url)
+  end
+
+  def load_favorite
+    @favorite = FavoriteVideo.find(params[:id])
+  end
+
+  def authorize_to_delete_favorite
+    redirect_to(account_path) unless(can_delete?(@favorite))
   end
 end

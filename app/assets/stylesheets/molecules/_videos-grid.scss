@@ -9,6 +9,30 @@
     width: 100%;
     margin: 0 $pulse $pulse 0;
 
+    .delete-video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin: -4px 0 0 0;
+
+      text-decoration: none;
+      background-color: $gray-3;
+
+      &__icon {
+        color: $red;
+        font-size: 3.2em;
+      }
+
+      &:hover {
+        background-color: darken($gray-3, 10);
+
+        .delete-video__icon {
+          color: $primary-color;
+        }
+      }
+    }
+
     .video-img {
       max-width: 100%;
     }

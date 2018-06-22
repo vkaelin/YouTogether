@@ -75,7 +75,7 @@
         <% if (current_user.favorite_videos.any?) %>
           <div class="videos-container">
             <% current_user.favorite_videos.each do |video| %>
-              <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
+              <%= render(partial: 'favorite_video_account', locals: { favorite: video }) %>
             <% end %>
           </div>
         <% else %>
@@ -83,7 +83,7 @@
           <h3><%= t('accountpage.nofavorite') %></h3>
         </div>
         <% end %>
-        <%= link_to(t('accountpage.addfavorite'), new_user_favorite_videos_path(current_user), class: 'btn--primary') %>
+        <%= link_to(t('accountpage.addfavorite'), new_user_favorite_video_path(current_user), class: 'btn--primary') %>
 
       </div>
     </div>

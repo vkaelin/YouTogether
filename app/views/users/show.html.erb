@@ -25,8 +25,14 @@
                     <div class="videos-container">
                       <% if (@user.favorite_videos.any?) %>
                         <div class="videos-container">
-                          <% @user.favorite_videos.each do |video| %>
-                            <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
+                          <% if(is_admin?)%>
+                            <% @user.favorite_videos.each do |video| %>
+                              <%= render(partial: 'favorite_video_account', locals: {favorite: video}) %>
+                            <% end %>
+                          <% else %>
+                            <% @user.favorite_videos.each do |video| %>
+                              <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
+                            <% end %>
                           <% end %>
                         </div>
                       <% else %>

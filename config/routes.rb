@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root to: 'home#index'
 
     resources :users do
-      resource :favorite_videos, only: [:new, :create]
+      resources :favorite_videos, only: [:new, :create, :destroy]
     end
 
     resources :sessions, only: [:new, :create, :destroy]

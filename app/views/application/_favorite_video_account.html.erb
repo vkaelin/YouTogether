@@ -1,0 +1,8 @@
+<div class="video-link">
+  <a href="https://youtube.com/watch?v=<%= favorite.url %>" target="_blank" id="favorite-<%= favorite.id %>">
+    <img class="video-img" src="https://img.youtube.com/vi/<%= favorite.url %>/hqdefault.jpg" alt="yt video img">
+  </a>
+  <%= link_to(user_favorite_video_path(current_user, favorite.id), method: :delete, remote: :true, class: 'delete-video') do %>
+    <i class="fa fa-times delete-video__icon"></i>
+  <% end %>
+</div>
