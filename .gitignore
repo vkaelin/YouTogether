@@ -24,3 +24,4 @@
 
 public/assets/*
 public/uploads/*
+config/application.yml
