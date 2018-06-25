@@ -23,17 +23,18 @@
                   <div class="col-12 col-md-6">
                     <h2 class="text--center"><%= t('userpage.favorite') %></h2>
                     <div class="videos-container">
-                      <% if (@user.favorite_videos.any?) %>
+                      <% if (@videos.any?) %>
                         <div class="videos-container">
                           <% if(is_admin?)%>
-                            <% @user.favorite_videos.each do |video| %>
+                            <% @videos.each do |video| %>
                               <%= render(partial: 'favorite_video_account', locals: {favorite: video}) %>
                             <% end %>
                           <% else %>
-                            <% @user.favorite_videos.each do |video| %>
+                            <% @videos.each do |video| %>
                               <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
                             <% end %>
                           <% end %>
+                          <%= paginate @videos %>
                         </div>
                       <% else %>
                       <div>

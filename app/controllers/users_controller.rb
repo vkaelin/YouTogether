@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @videos = @user.favorite_videos.page(params[:page])
   end
 
   private
