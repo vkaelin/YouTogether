@@ -6,9 +6,9 @@
       <h3 class="card__title"><%= room.name %></h3>
     </div>
   <% end %>
-  <form class="card__footer">
+  <form class="card__footer" id="room-<%= room.id %>">
 
-    <%= link_to(room_path(room), method: :delete, class: 'btn--flex btn--solo') do %>
+    <%= link_to(room_path(room), method: :delete, class: 'btn--flex btn--solo', remote: :true) do %>
       <svg class="icon" role="presentation">
         <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#delete") %>"></use>
       </svg>

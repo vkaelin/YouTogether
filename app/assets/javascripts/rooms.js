@@ -1,3 +1,9 @@
+Rooms = {};
+Rooms.removeRoom = function(roomId) {
+  document.getElementById("room-" + roomId).parentElement.remove();
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // Check that we are on a room page
@@ -160,12 +166,6 @@ document.addEventListener('DOMContentLoaded', function() {
       location.reload();
     });
 
-
-
-
-
   } // End check room page
 
-
-
-});
+}); // End DOMContentLoaded
