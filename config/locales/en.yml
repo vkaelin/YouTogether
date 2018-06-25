@@ -2,12 +2,15 @@ en:
   account: 'My account'
   accountpage:
     addfavorite: 'Add a favorite video'
+    createdrooms: 'Created rooms'
     favorites: 'Favorite videos'
     joinedrooms: 'Your joined rooms'
     nofavorite: 'You have no favorite videos for now!'
     norooms: 'You have joined no room yet!'
+    noroomscreated: 'You have created no room yet!'
     or: 'or'
     updateaccount: 'Update account'
+    youraccount: 'Your account'
   createfavoritepage:
     add: 'Add'
     placeholder: 'Paste YouTube link here'
@@ -35,6 +38,9 @@ en:
     pastelink: 'Paste your YT link here'
     yourrooms: 'Your rooms'
   roomcard:
+    created: 'Created'
+    delete: 'Delete room'
+    deleteadmin: 'Delete'
     join: 'Join'
     joined: 'Joined'
     leave: 'Leave'

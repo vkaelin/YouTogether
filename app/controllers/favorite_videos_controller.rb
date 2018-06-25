@@ -47,6 +47,6 @@ class FavoriteVideosController < ApplicationController
   end
 
   def authorize_to_delete_favorite
-    redirect_to(account_path) unless(can_delete?(@favorite))
+    redirect_to(account_path) unless(can_delete_fav?(@favorite))
   end
 end

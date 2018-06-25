@@ -2,12 +2,15 @@ fr:
   account: 'Mon compte'
   accountpage:
     addfavorite: 'Ajouter une vidéo à vos favorites'
+    createdrooms: 'Vos séances créées'
     favorites: 'Vidéos favorites'
     joinedrooms: 'Vos séances rejointes'
     nofavorite: "Vous n'avez aucune vidéo favorite pour le moment!"
     norooms: "Vous n'avez rejoint aucune séance!"
+    noroomscreated: "Vous n'avez créé aucune séance!"
     or: 'ou'
     updateaccount: 'Modifier votre compte'
+    youraccount: 'Votre compte'
   createfavoritepage:
     add: 'Ajouter'
     placeholder: 'Collez ici le lien de la vidéo YouTube'
@@ -35,6 +38,9 @@ fr:
     pastelink: 'Lien de la nouvelle vidéo'
     yourrooms: 'Vos séances'
   roomcard:
+    created: 'Créée'
+    delete: 'Supprimer la séance'
+    delete: 'Supprimer'
     join: 'Rejoindre'
     joined: 'Rejointe'
     leave: 'Quitter'

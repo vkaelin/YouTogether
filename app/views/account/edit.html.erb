@@ -4,7 +4,7 @@
       <div class="col-12">
 
         <div class="hero text--center">
-          <h1 class="hero__title m-b-sm">Your account</h1>
+          <h1 class="hero__title m-b-sm"><%= t('accountpage.youraccount') %></h1>
           <img class="avatar" src="<%= current_user.avatar_url %>">
         </div>
 
@@ -60,6 +60,27 @@
           <h3><%= t('accountpage.norooms') %></h3>
           <%= link_to(t('roomspage.search'), rooms_path, class: 'btn--primary') %>
           <span><%= t('accountpage.or') %></span>
+          <%= link_to(t('roomspage.create'), new_room_path, class: 'btn--primary') %>
+        </div>
+        <% end %>
+
+      </div>
+    </div> <!-- /big-card-extended -->
+
+    <div class="big-card--extended">
+      <div class="big-card__content">
+
+        <h2 class="text--center text--title"><%= t('accountpage.createdrooms') %></h2>
+
+        <% if (@owned_rooms.any?) %>
+          <ul class="cards bare-list">
+            <% @owned_rooms.each do |room| %>
+              <%= render(partial: 'owned_room_card', locals: { room: room }) %>
+            <% end %>
+          </ul>
+        <% else %>
+        <div class="no-room text--center">
+          <h3><%= t('accountpage.norooms') %></h3>
           <%= link_to(t('roomspage.create'), new_room_path, class: 'btn--primary') %>
         </div>
         <% end %>

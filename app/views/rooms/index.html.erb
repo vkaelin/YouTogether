@@ -33,9 +33,21 @@
             <h2 class="text--center m-b-md">Results for "<%= @search_term %>"</h2>
           <% end %>
           <ul class="cards bare-list">
-            <% @rooms.each do |room| %>
-              <%= render(partial: 'room_card', locals: { room: room }) %>
+
+            <% if(is_admin?) %>
+              <% @rooms.each do |room| %>
+                <%= render(partial: 'admin_room_card', locals: { room: room }) %>
+              <% end %>
+            <% else %>
+              <% @rooms.each do |room| %>
+                <% if(owns_room?(room)) %>
+                  <%= render(partial: 'owned_room_card', locals: { room: room }) %>
+                <% else %>
+                  <%= render(partial: 'room_card', locals: { room: room }) %>
+                <% end %>
+              <% end %>
             <% end %>
+
           </ul>
 
           <%= paginate @rooms %>

@@ -2,7 +2,7 @@
 /*  Messages
  * ------------------------------ */
  .messages {
-   max-height: 200px;
+   max-height: 200px; // Give initial value before getting override by JS
    overflow-y: scroll;
    margin: 0 0 $pulse 0;
  }

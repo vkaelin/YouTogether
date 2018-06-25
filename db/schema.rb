@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180622095611) do
+ActiveRecord::Schema.define(version: 20180625130813) do
 
   create_table "favorite_videos", force: :cascade do |t|
     t.string "url"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20180622095611) do
     t.string "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "owner_id"
+    t.index ["owner_id"], name: "index_rooms_on_owner_id"
   end
 
   create_table "rooms_users", id: false, force: :cascade do |t|

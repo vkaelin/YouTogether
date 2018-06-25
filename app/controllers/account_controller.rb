@@ -2,7 +2,8 @@ class AccountController < ApplicationController
   before_action :ensure_authenticated
 
   def edit
-    @rooms = current_user.rooms
+    @rooms = current_user.rooms.where.not(owner: current_user)
+    @owned_rooms = Room.where(owner: current_user)
   end
 
   def update

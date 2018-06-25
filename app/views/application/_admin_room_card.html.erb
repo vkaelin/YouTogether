@@ -1,0 +1,21 @@
+<li class="card">
+  <%= link_to(room_path(room), class: 'card__thumb', method: :get) do %>
+    <%= render(partial: 'room_photo', locals: { url: room.video }) %>
+    <div class="card__intro">
+      <h3 class="card__title"><%= room.name %></h3>
+    </div>
+  <% end %>
+  <form class="card__footer">
+
+    <%= link_to(room_room_users_path(room), method: :delete, class: 'btn--flex btn--triple') do %>
+      <%= t('roomcard.leave') %>
+    <% end %>
+    <%= link_to(room_room_users_path(room), method: :post, class: 'btn--flex btn--triple') do %>
+      <%= t('roomcard.join') %>
+    <% end %>
+    <%= link_to(room_path(room), method: :delete, class: 'btn--flex btn--triple') do %>
+      <%= t('roomcard.deleteadmin') %>
+    <% end %>
+
+  </form>
+</li>

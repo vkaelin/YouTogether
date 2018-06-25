@@ -1,0 +1,19 @@
+<li class="card">
+  <%= link_to(room_path(room), class: 'card__thumb', method: :get) do %>
+    <%= render(partial: 'room_photo', locals: { url: room.video }) %>
+    <div class="card__thumb__tag tag--red"><%= t('roomcard.created') %></div>
+    <div class="card__intro">
+      <h3 class="card__title"><%= room.name %></h3>
+    </div>
+  <% end %>
+  <form class="card__footer">
+
+    <%= link_to(room_path(room), method: :delete, class: 'btn--flex btn--solo') do %>
+      <svg class="icon" role="presentation">
+        <use xlink:href="<%= asset_url("icons/icons-defs.svg" + "#delete") %>"></use>
+      </svg>
+      <%= t('roomcard.delete') %>
+    <% end %>
+
+  </form>
+</li>

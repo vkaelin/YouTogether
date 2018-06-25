@@ -4,9 +4,15 @@
 .room {
   margin: 0 auto;
 
+  .col-lg-3,
+  .col-lg-7,
+  .col-lg-2 {
+    margin: 0 0 $pulse 0;
+  }
+
   &__col {
     padding: $pulse;
-    margin: 0 0 $pulse 0;
+    height: 100%;
 
     background-color: $white;
     border-radius: 8px;
@@ -69,8 +75,7 @@
 
 .room-container {
   position: relative;
-  padding: $pulse*2 0 $pulse*3 0;
-  min-height: 75vh; // TODO: CHANGE IT
+  padding: $pulse*2 0 $pulse*5 0;
 }
 
 .hero-room {

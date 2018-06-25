@@ -79,6 +79,21 @@
     flex: 1 0 auto;
     border-radius: 0 0 8px 8px;
   }
+
+  .btn--triple {
+    width: calc(100% / 3);
+    justify-content: center;
+    border-right: 1px solid $gray-3;
+
+    &:first-child {
+      border-radius: 0 0 0 8px;
+    }
+
+    &:last-child {
+      border-radius: 0 0 8px 0;
+      border-right: none;
+    }
+  }
 }
 
 /* ------------------------------

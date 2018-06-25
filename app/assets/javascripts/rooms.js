@@ -33,15 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     /* ------------------------------
-    /*  Reload page when changing language to render the YT player
-     * ------------------------------ */
-    var languages = document.querySelector('.languages');
-    languages.addEventListener('click', function(e) {
-      location.reload();
-    });
-
-
-    /* ------------------------------
     /*  Send messages
      * ------------------------------ */
     var roomId = document.querySelector("[data-behavior='messages']").getAttribute('data-room-id');
@@ -55,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     var messagesContainer = document.querySelector('.messages');
+    var colContainer = document.querySelector('.room__col');
+    messagesContainer.style.maxHeight = String(colContainer.offsetHeight) + "px"; // Give maxHeight to messages
     messagesContainer.scrollTop = messagesContainer.scrollHeight; // Scroll to last messages
 
 
@@ -154,15 +147,17 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("error in regex");
         var error = document.querySelector('#errors');
         error.style.visibility = 'visible';
-        //error.classList.remove('hidden');
         setTimeout(() => error.style.visibility = 'hidden', 3000);
-        //setTimeout(() => error.classList.add('hidden'), 3000);
-
-        // $errors = $('#errors')
-        // $errors.slideDown()
-        // setTimeout((-> $errors.slideUp()), 3000)
       }
+    });
 
+
+    /* ------------------------------
+    /*  Reload page when changing language to render the YT player
+     * ------------------------------ */
+    var languages = document.querySelector('.languages');
+    languages.addEventListener('click', function(e) {
+      location.reload();
     });
 
 

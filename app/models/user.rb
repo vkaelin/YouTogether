@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :messages
   has_many :favorite_videos
   has_secure_password
+  has_many :owned_rooms, class_name: 'Room'
 
   validates :email, uniqueness: true
   validates :name, presence: true
