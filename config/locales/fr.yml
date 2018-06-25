@@ -66,3 +66,9 @@ fr:
         avatar: 'Avatar'
       room:
         name: 'Nom'
+  views:
+    pagination:
+      first: "&laquo; Première"
+      last: "Dernière &raquo;"
+      previous: "&lsaquo; Préc."
+      next: "Suiv. &rsaquo;"

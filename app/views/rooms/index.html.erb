@@ -37,6 +37,9 @@
               <%= render(partial: 'room_card', locals: { room: room }) %>
             <% end %>
           </ul>
+
+          <%= paginate @rooms %>
+
         <% else %>
           <h2 class="text--center m-b-md">No rooms found!</h2>
         <% end %>

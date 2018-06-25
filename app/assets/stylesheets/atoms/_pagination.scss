@@ -1,0 +1,35 @@
+/* ------------------------------
+/*  Pagination
+ * ------------------------------ */
+.pagination {
+  border-top: 1px solid $gray-2;
+  padding: $pulse 0;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  a {
+    background-color: $gray-2;
+    color: $black;
+    padding: $pulse/4 $pulse/2;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 $pulse/5;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+
+  .current {
+    color: $white;
+    background-color: $gray-1;
+    padding: $pulse/4 $pulse/2;
+    margin: 0 $pulse/5;
+    text-transform: uppercase;
+  }
+}

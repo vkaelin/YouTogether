@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   def index
     @search_term = params[:q]
     @no_search = @search_term.nil?
-    @rooms = Room.search(@search_term)
+    @rooms = Room.search(@search_term).page(params[:page])
   end
 
   def new

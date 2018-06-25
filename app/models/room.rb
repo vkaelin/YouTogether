@@ -6,4 +6,6 @@ class Room < ApplicationRecord
   validates :name, length: { maximum: 20 }
 
   scope :search,  ->(search_term) { where('name LIKE ?', "%#{search_term}%") }
+
+  paginates_per 9
 end

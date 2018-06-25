@@ -33,7 +33,7 @@ class FavoriteVideosController < ApplicationController
 
   def destroy
     @favorite = FavoriteVideo.find(params[:id])
-    current_user.favorite_videos.destroy(@favorite)
+    @favorite.destroy
   end
 
   private

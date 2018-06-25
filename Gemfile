@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt' # For Authentification password
 gem 'carrierwave', '~> 1.1.0' # For users' avatars upload
 gem 'redis' # To use in production with ActionCable
+gem 'kaminari' # Page system for rooms search
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
