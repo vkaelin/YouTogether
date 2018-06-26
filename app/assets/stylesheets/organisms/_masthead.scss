@@ -2,7 +2,6 @@
 /*  Masthead
  * ------------------------------ */
 .masthead {
-  // background: asset-url('background-left.png') left bottom, linear-gradient(to right, $grad-1, $grad-2);
   background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
   width: 100vw;
@@ -38,11 +37,6 @@
     box-shadow: $shadow-2;
   }
 
-  // @include tablet-vertical-height {
-  //   height: 90vh;
-  //   padding-bottom: 0;
-  // }
-
   @include tablet-big-height {
     height: 90vh;
     padding-bottom: 0;
@@ -63,13 +57,10 @@
 
 .masthead--small {
   @extend .masthead;
-  // background: asset-url('background-right.png') right 50%, linear-gradient(-45deg, #5846C4, #7A6ADC);
   background: asset-url('background-right.png') left 50%, linear-gradient(-90deg, $purple, $primary-color);
   background-repeat: no-repeat;
 
-  height: auto;
   min-height: 0;
-  max-height: 900px;
   padding-bottom: 0;
 
   .masthead__container {

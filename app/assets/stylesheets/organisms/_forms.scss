@@ -21,7 +21,7 @@
   border: 1px solid $gray-2;
   border-radius: 3px;
   box-shadow: $shadow;
-  transition: all 0.15s cubic-bezier(.44,-0.44,.44,1.66);
+  transition: all 0.15s;
 }
 
 .input-group__field[type="file"] {
@@ -45,13 +45,11 @@
     align-items: center;
   }
 
-  .input-group--horizontal .input-group__label,
-  .input-group--horizontal > .field_with_errors {
+  .input-group--horizontal .input-group__label {
     flex: 0 1 20%;
   }
 
-  .input-group--horizontal .input-group__field,
-  .input-group--horizontal > .field_with_errors ~ .field_with_errors {
+  .input-group--horizontal .input-group__field {
     flex: 1 0 auto;
     width: auto;
 

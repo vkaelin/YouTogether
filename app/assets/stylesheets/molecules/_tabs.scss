@@ -31,10 +31,10 @@
 
  .tab-content {
    display: none;
-   padding: 6px 12px;
+   padding: $pulse/4 $pulse/2;
    border: 1px solid $gray-3;
    border-top: none;
-   animation: fadeEffect 1s;
+   animation: fadeEffect 1s; // fade effect when changing tab
    border-radius: 0 0 8px 8px;
 
    .message {

@@ -2,9 +2,6 @@
 /*  Profile
  * ------------------------------ */
 .profile-container {
-  //position: relative;
-  //z-index: 99;
-  //margin: -$pulse*42 auto 0 auto;
   padding: 0 0 $pulse*2 0;
 
   .col-12:first-child {
@@ -25,19 +22,3 @@
 .profile-btn {
   margin: $pulse auto 0 auto;
 }
-
-// .profile-svg path {
-//   fill: $white;
-// }
-
-// @include tablet-big {
-//   .push {
-//     height: 76px;
-//   }
-// }
-//
-// @include desktop {
-//   .profile-svg path {
-//     fill: #324355;
-//   }
-// }

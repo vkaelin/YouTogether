@@ -58,7 +58,7 @@
   }
 
   .volume {
-    background: linear-gradient(-90deg, #5846C4, #7A6ADC);
+    background: linear-gradient(-90deg, $purple-2, $purple-3);
   }
 }
 
@@ -69,6 +69,6 @@
 }
 
 #time {
-  width: 65px;
+  width: 65px; // fix width because content is changing with JS
   cursor: default;
 }
