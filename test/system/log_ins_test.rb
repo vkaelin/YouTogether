@@ -1,5 +1,6 @@
 require "application_system_test_case"
 
+
 class LogInsTest < ApplicationSystemTestCase
 
   test 'sign up creates a User' do
