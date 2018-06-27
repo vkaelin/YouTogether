@@ -3,11 +3,11 @@
  * ============================== */
 @font-face {
   font-family: "GT-Eesti";
-  src: asset-url('GT-Eesti-Display-Medium.ttf') format("truetype");
+  src: asset-url('fonts/GT-Eesti-Display-Medium.ttf') format("truetype");
 }
 @font-face {
   font-family: "GT-Eesti-lighter";
-  src: asset-url('GT-Eesti-Text-Book.ttf') format("truetype");
+  src: asset-url('fonts/GT-Eesti-Text-Book.ttf') format("truetype");
 }
 
 p, ul, ol, span, label {
