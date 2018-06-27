@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
   has_and_belongs_to_many :users
   has_many :messages
-  belongs_to :owner, class_name: 'User'
+  belongs_to :user
 
   validates :name, presence: true
   validates :name, length: { maximum: 20 }

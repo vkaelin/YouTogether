@@ -4,7 +4,7 @@ require "application_system_test_case"
 class LogInsTest < ApplicationSystemTestCase
 
   test 'sign up creates a User' do
-    visit(signup_path)
+    visit(signup_path( { locale: 'en' } ))
     fill_in('Email', with: 'valentin@epfl.ch')
     fill_in('Password', with: 'password')
     click_on('Sign up', match: :first)

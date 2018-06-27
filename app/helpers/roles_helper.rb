@@ -10,13 +10,13 @@ module RolesHelper
   def can_delete_room?(room)
     case(current_user.role)
     when 'admin' then true
-    when 'registered' then (room.owner == current_user)
+    when 'registered' then (room.user == current_user)
     else false
     end
   end
 
   def owns_room?(room)
-    room.owner == current_user
+    room.user == current_user
   end
 
   def is_admin?()
