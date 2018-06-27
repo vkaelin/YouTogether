@@ -141,16 +141,13 @@ document.addEventListener('DOMContentLoaded', function() {
     changeURL.addEventListener('submit', function(e) {
       e.preventDefault();
       var content = document.querySelector('#url');
-      console.log(content.value);
 
       regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
       match = content.value.match(regExp);
       if (match && match[2].length == 11) {
-        console.log("url:" + match[2]);
         App.rooms.video_controllers(roomId, "url:" + match[2]);
         content.value = '';
       } else {
-        console.log("error in regex");
         var error = document.querySelector('#errors');
         error.style.visibility = 'visible';
         setTimeout(() => error.style.visibility = 'hidden', 3000);

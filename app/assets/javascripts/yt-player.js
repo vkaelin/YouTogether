@@ -15,11 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var vidClock;
 
     var url = document.querySelector('#video-url').innerText.substr(4);
-    console.log("URL BEFORE CHECK : " + url);
     if (!url) {
       url = 'JTCinZpPeOU';
     }
-    console.log("URL FINAL : " + url);
 
     window.onYouTubePlayerAPIReady = function() {
       player = new YT.Player('ytplayer', {
@@ -74,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
               timer.innerHTML = getTime(time);
             }
             var percent = (elapsed / duration);
-            // seekSlider.setAttribute("style", "transform: scaleX(" + percent + ")");
             seekSlider.setAttribute("style", "flex-grow: " + (percent + 0.011)); // to fix animation with border radius
           }
         }, 50);
@@ -99,6 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return output;
     }
 
-  }
+  } // end check room page
 
-});
+}); // end DOMContentLoaded

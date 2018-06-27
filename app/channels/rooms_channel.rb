@@ -16,15 +16,9 @@ class RoomsChannel < ApplicationCable::Channel
   end
 
   def video_controllers(data)
-    logger.info("*****************************")
-    logger.info(data['control'])
-    logger.info("*****************************")
     @room = Room.find(data["room_id"])
 
     if data['control'].include? 'url:'
-      logger.info("*****************************")
-      logger.info('INJECT URL')
-      logger.info("*****************************")
       @room.video = data['control']
       @room.save
     end

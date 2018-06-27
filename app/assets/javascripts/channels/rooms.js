@@ -8,9 +8,6 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
   },
 
   received: function(data) {
-
-    console.log("RECIEVED");
-
     var playerId = document.querySelector('#ytplayer').getAttribute('data-room-id');
     if (playerId == data.room_id && data.control != undefined) {
       if (data.control == 'play') {
@@ -18,27 +15,21 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
       } else if (data.control == 'pause') {
         player.pauseVideo();
       } else if (data.control == 'sync') {
-        console.log('sync');
         player.seekTo(0);
         var syncInfo = document.querySelector('#is-sync');
         syncInfo.innerHTML = '<i class="fa fa-check"></i> Sync!';
         syncInfo.className = 'btn--primary';
       } else if (data.control.includes("url:")) {
-        console.log("DOWN THERE");
-        console.log(data.control.substr(4));
         player.loadVideoById(data.control.substr(4));
       } else {
         var progressBar = document.querySelector('.progress-container');
-        console.log(parseFloat(data.control));
         player.seekTo(parseFloat(data.control) * player.getDuration() / progressBar.offsetWidth);
       }
       return;
     } // End of video controllers
 
     var activeRoom = document.querySelector("[data-behavior='messages'][data-room-id='" + data.room_id + "']");
-    console.log(activeRoom);
     if(activeRoom != null) {
-      console.log("APPEND");
       activeRoom.innerHTML += data.message;
       var messagesContainer = document.querySelector('.messages');
       messagesContainer.scrollTop = messagesContainer.scrollHeight; // scroll to last messages
