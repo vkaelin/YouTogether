@@ -17,6 +17,6 @@ class UsersTest < ApplicationSystemTestCase
 
     assert_equal current_path, account_path({ locale: 'en' })
     assert_equal 'After', page.find_field('Name').value
-      assert_equal 'after@epfl.ch', page.find_field('Email').value
+    assert_equal 'after@epfl.ch', page.find_field('Email').value
   end
 end

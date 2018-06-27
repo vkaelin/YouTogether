@@ -1,4 +1,4 @@
-<div class="masthead--inversed">
+<div class="masthead--inversed--height-not-fixed">
   <div class="container masthead__container">
     <div class="row masthead__row">
       <div class="col-12">
@@ -7,48 +7,44 @@
           <h1 class="hero__title"><%= t('userpage.profile') %> <%= @user.name%></h1>
         </div>
 
-        <div class="container">
-          <div class="profile-container">
-            <section class="big-card--extended">
-              <div class="big-card__content">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <h2 class="text--center"><%= t('userpage.details') %></h2>
-                    <p><b><%= t('userpage.name') %>:</b> <%= @user.name %></p>
-                    <p><b><%= t('userpage.date') %>:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
-                    <div class="image-container">
-                      <img class="avatar-profile" src="<%= @user.avatar_url %>">
-                    </div>
-                  </div> <!-- /col-12 -->
-                  <div class="col-12 col-md-6">
-                    <h2 class="text--center"><%= t('userpage.favorite') %></h2>
+        <section class="big-card--extended profile-container">
+          <div class="big-card__content">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h2 class="text--center"><%= t('userpage.details') %></h2>
+                <p><b><%= t('userpage.name') %>:</b> <%= @user.name %></p>
+                <p><b><%= t('userpage.date') %>:</b> <%= @user.created_at.strftime("%e/%m/%Y") %></p>
+                <div class="image-container">
+                  <img class="avatar-profile" src="<%= @user.avatar_url %>">
+                </div>
+              </div> <!-- /col-12 -->
+              <div class="col-12 col-md-6">
+                <h2 class="text--center"><%= t('userpage.favorite') %></h2>
+                <div class="videos-container">
+                  <% if (@videos.any?) %>
                     <div class="videos-container">
-                      <% if (@videos.any?) %>
-                        <div class="videos-container">
-                          <% if(is_admin?)%>
-                            <% @videos.each do |video| %>
-                              <%= render(partial: 'favorite_video_account', locals: {favorite: video}) %>
-                            <% end %>
-                          <% else %>
-                            <% @videos.each do |video| %>
-                              <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
-                            <% end %>
-                          <% end %>
-                          <%= paginate @videos %>
-                        </div>
+                      <% if(is_admin?)%>
+                        <% @videos.each do |video| %>
+                          <%= render(partial: 'favorite_video_account', locals: {favorite: video}) %>
+                        <% end %>
                       <% else %>
-                      <div>
-                        <h3><%= t('userpage.nofavorite') %></h3>
-                      </div>
+                        <% @videos.each do |video| %>
+                          <%= render(partial: 'favorite_video', locals: {url: video.url}) %>
+                        <% end %>
                       <% end %>
+                      <%= paginate @videos %>
                     </div>
-                  </div> <!-- /col-12 -->
-                  <%= link_to(t('userpage.backtorooms'), rooms_path, class: 'btn--primary profile-btn') %>
-                </div> <!-- /row -->
-              </div>
-            </section>
-          </div> <!-- /profile-container -->
-        </div> <!-- /container -->
+                  <% else %>
+                  <div>
+                    <h3><%= t('userpage.nofavorite') %></h3>
+                  </div>
+                  <% end %>
+                </div>
+              </div> <!-- /col-12 -->
+              <%= link_to(t('userpage.backtorooms'), rooms_path, class: 'btn--primary profile-btn') %>
+            </div> <!-- /row -->
+          </div>
+        </section> <!-- /profile-container /big-card-extended -->
 
       </div> <!-- /col-12 -->
     </div> <!-- /row -->

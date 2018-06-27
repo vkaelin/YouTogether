@@ -33,9 +33,11 @@ en:
   logout: 'Log out'
   playerpage:
     changeurl: 'Change URL'
+    chat: 'Chat'
     notsynchronized: 'Not synchronized'
     notvalid: 'Your video URL is not valid!'
     pastelink: 'Paste your YT link here'
+    users: 'Users'
     yourrooms: 'Your rooms'
   roomcard:
     created: 'Created'
@@ -47,7 +49,9 @@ en:
   rooms: 'Rooms'
   roomspage:
     create: 'Create a room'
+    noresults: 'No rooms found!'
     orcreate: 'Or create a room:'
+    results: 'Results for'
     search: 'Search for a room:'
   search: 'Search'
   signup: 'Sign Up'

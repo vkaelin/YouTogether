@@ -33,21 +33,25 @@ fr:
   logout: 'Déconnexion'
   playerpage:
     changeurl: 'Changer URL'
+    chat: 'Chat'
     notsynchronized: 'Pas synchronisé'
     notvalid: "Le lien de la vidéo n'est pas valide!"
     pastelink: 'Lien de la nouvelle vidéo'
+    users: 'Utilisateurs'
     yourrooms: 'Vos séances'
   roomcard:
     created: 'Créée'
     delete: 'Supprimer la séance'
-    delete: 'Supprimer'
+    deleteadmin: 'Supprimer'
     join: 'Rejoindre'
     joined: 'Rejointe'
     leave: 'Quitter'
   rooms: 'Séances'
   roomspage:
     create: 'Créer une séance'
+    noresults: 'Aucune séance trouvée!'
     orcreate: 'Ou créez une séance:'
+    results: 'Résultats pour'
     search: 'Recherchez une séance:'
   search: 'Rechercher'
   signup: 'Inscription'

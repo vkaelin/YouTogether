@@ -6,7 +6,6 @@
     </div>
   <% end %>
   <form class="card__footer" id="room-<%= room.id %>">
-
     <%= link_to(room_room_users_path(room), method: :delete, class: 'btn--flex btn--triple') do %>
       <%= t('roomcard.leave') %>
     <% end %>
@@ -16,6 +15,5 @@
     <%= link_to(room_path(room), method: :delete, class: 'btn--flex btn--triple', remote: :true) do %>
       <%= t('roomcard.deleteadmin') %>
     <% end %>
-
   </form>
 </li>

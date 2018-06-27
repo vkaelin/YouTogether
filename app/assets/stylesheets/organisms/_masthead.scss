@@ -68,3 +68,8 @@
     margin-top: $pulse*6;
   }
 }
+
+.masthead--inversed--height-not-fixed {
+  @extend .masthead--inversed;
+  height: auto;
+}

@@ -9,7 +9,6 @@
     </div>
   <% end %>
   <form class="card__footer">
-
     <% if(has_joined?(room)) %>
       <%= link_to(room_room_users_path(room), method: :delete, class: 'btn--flex btn--solo') do %>
         <svg class="icon" role="presentation">
@@ -25,6 +24,5 @@
         <%= t('roomcard.join') %>
       <% end %>
     <% end %>
-
   </form>
 </li>
