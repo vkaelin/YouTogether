@@ -15,6 +15,12 @@ module RolesHelper
     end
   end
 
+  def can_see_room?(room)
+    return unless logged_in?
+    return true if current_user.role == 'admin'
+    current_user.rooms.exists?(room.id)
+  end
+
   def owns_room?(room)
     return unless logged_in?
     room.user == current_user

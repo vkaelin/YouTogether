@@ -46,7 +46,7 @@ class RoomsController < ApplicationController
   end
 
   def can_access_room
-    redirect_to(rooms_path) unless(current_user.rooms.exists?(@room.id))
+    redirect_to(rooms_path) unless(can_see_room?(@room))
   end
 
   def can_destroy_room
