@@ -63,7 +63,9 @@
 }
 
 #ytplayer {
-  pointer-events: none;
+  @include tablet-big {
+    pointer-events: none; // We can't cancel on mobile because we need to load the video one time at the beginning
+  }
   max-width: 100%;
   margin: 0 0 $pulse 0;
 }
