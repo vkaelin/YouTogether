@@ -77,7 +77,7 @@ At first, the fact that the rooms have to have 2 different user(s)  was a little
 
 **Tests**
 
-The system tests were literally a pain. At first, the i18n params locale was not included so I had to give a hash to every path helpers. Secondly, if I put the "fonts" folder as a sibling to "images" folder, the tests activated an error message (can't find the fonts). Even with the line: "config.assets.paths << Rails.root.join("app", "assets", "fonts")" in my application.rb file. To make it works, I had to put the fonts folder inside the images folder again and uses relatives paths.
+The system tests were literally a pain. At first, the i18n params locale was not included so I had to give a hash to every path helpers. Secondly, if I put the "fonts" folder as a sibling to "images" folder, the tests activated an error message (can't find the fonts). Thanks to Neill who explained to me how to reset the cache to make it works!
 
 **Deploying to production**
 
