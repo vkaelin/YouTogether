@@ -96,8 +96,8 @@ class RoomsTest < ApplicationSystemTestCase
     click_button('Log in')
 
     visit(rooms_path({ locale: 'en' }))
-    assert page.has_content?('Delete room')
-    refute page.has_content?('Join')
+    assert page.has_content?('DELETE ROOM')
+    refute page.has_content?('JOIN')
   end
 
   test 'see join button if we dont are the owner of the room' do
@@ -116,8 +116,8 @@ class RoomsTest < ApplicationSystemTestCase
     click_button('Log in')
 
     visit(rooms_path({ locale: 'en' }))
-    refute page.has_content?('Delete room')
-    assert page.has_content?('Join')
+    refute page.has_content?('DELETE ROOM')
+    assert page.has_content?('JOIN')
   end
 
   test 'see all 3 buttons if we are an admin' do
@@ -136,9 +136,9 @@ class RoomsTest < ApplicationSystemTestCase
     click_button('Log in')
 
     visit(rooms_path({ locale: 'en' }))
-    assert page.has_content?('Delete')
-    assert page.has_content?('Join')
-    assert page.has_content?('Leave')
+    assert page.has_content?('DELETE')
+    assert page.has_content?('JOIN')
+    assert page.has_content?('LEAVE')
   end
 
   test 'cannot join room if not logged' do
