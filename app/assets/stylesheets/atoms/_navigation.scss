@@ -25,12 +25,16 @@
 
   a {
     font-family: 'GT-Eesti', "Lato", sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $white;
     text-decoration: none;
 
     &:hover {
       color: darken($white, 10);
+    }
+
+    @include tablet {
+      font-size: 1.8rem;
     }
   }
 }

@@ -5,8 +5,7 @@ class User < ApplicationRecord
   has_secure_password
   has_many :owned_rooms, class_name: 'Room'
 
-  validates :email, presence: true
-  validates :email, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   validates :name, presence: true
   validates :role, inclusion: { in: %w(registered admin) }
 
