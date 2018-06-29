@@ -26,7 +26,7 @@ module RolesHelper
     room.user == current_user
   end
 
-  def is_admin?()
+  def is_admin?
     return unless logged_in?
     current_user.role == 'admin'
   end

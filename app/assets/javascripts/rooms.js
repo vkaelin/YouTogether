@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     volumeContainer.addEventListener('click', function(e) {
       var offset = this.getBoundingClientRect().left;
       var volume = (e.pageX - offset) * 100 / this.offsetWidth;
-      player.setVolume(volume)
+      player.setVolume(volume);
       volumeSlider = document.querySelector('.volume');
       volume += 1; // to fix animation with border radius
       volumeSlider.setAttribute("style", "flex-grow: " + volume / 100);
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*  Play button
      * ------------------------------ */
     var playButton = document.querySelector('#play');
-    playButton.addEventListener('click', function(e) {
+    playButton.addEventListener('click', function() {
       App.rooms.video_controllers(roomId, 'play');
     });
 
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*  Pause button
      * ------------------------------ */
     var pauseButton = document.querySelector('#pause');
-    pauseButton.addEventListener('click', function(e) {
+    pauseButton.addEventListener('click', function() {
       App.rooms.video_controllers(roomId, 'pause');
     });
 
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*  Sync button
      * ------------------------------ */
     var syncButton = document.querySelector('#sync');
-    syncButton.addEventListener('click', function(e) {
+    syncButton.addEventListener('click', function() {
       App.rooms.video_controllers(roomId, 'pause');
       setTimeout(() => {
         App.rooms.video_controllers(roomId, 'sync');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * ------------------------------ */
     var videoProgress = document.querySelector('.progress-container');
     videoProgress.addEventListener('click', function(e) {
-      offset = this.getBoundingClientRect().left;
+      var offset = this.getBoundingClientRect().left;
       App.rooms.video_controllers(roomId, (e.pageX - offset).toString());
     });
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /*  Reload page when changing language to render the YT player
      * ------------------------------ */
     var languages = document.querySelector('.languages');
-    languages.addEventListener('click', function(e) {
+    languages.addEventListener('click', function() {
       location.reload();
     });
 

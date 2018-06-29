@@ -81,7 +81,7 @@ The system tests were literally a pain. At first, the i18n params locale was not
 
 **Deploying to production**
 
-Deploying ActionCable application on Heroku was a mess at the beginning. Luckily, I found an [amazing tutorial](https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable) and it works like a charm.
+Deploying ActionCable application on Heroku was a mess at the beginning. Luckily, I found an [amazing tutorial](https://blog.heroku.com/real_time_rails_implementing_websockets_in_rails_5_with_action_cable) and it works like a charm. The [custom domain name](http://youtogether.ch/) is currently not working, I think I need to wait for the DNS.
 
 ## Conclusion
 I am happy with my final application. I am just a little disappointed with the YouTube player on mobile. The app is not really a pleasure to use on mobile because of that.

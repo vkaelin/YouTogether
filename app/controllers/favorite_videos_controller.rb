@@ -11,8 +11,8 @@ class FavoriteVideosController < ApplicationController
 
   def create
     url = favorite_params[:url]
-    regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
-    match = url.match(regExp);
+    reg_exp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+    match = url.match(reg_exp)
 
     unless (match && match[2].length == 11)
       @favorite = FavoriteVideo.new

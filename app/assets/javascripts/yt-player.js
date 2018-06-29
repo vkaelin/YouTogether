@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
         videoId: url,
         playerVars: {
           controls: 0,
-          disablekb: 1
+          disablekb: 1,
+          rel: 0
         },
         events: {
           'onReady': onPlayerReady,
@@ -45,14 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
       // 5. The API calls this function when the player's state changes.
       //    The function indicates that when playing a video (state=1),
       //    the player should play for six seconds and then stop.
-      var done = false;
       function onPlayerStateChange(event) {
         document.getElementById( "title" ).innerText = player.getVideoData().title;
       }
-      function stopVideo() {
-        player.stopVideo();
-      }
-    }
+    };
 
     function handleState(state) {
       var seekSlider = document.querySelector('.progress');
