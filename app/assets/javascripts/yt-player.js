@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var url = document.querySelector('#video-url').innerText.substr(4);
     if (!url) {
-      url = 'JTCinZpPeOU';
+      url = 'cVzkJFZEv78';
     }
 
     window.onYouTubePlayerAPIReady = function() {
