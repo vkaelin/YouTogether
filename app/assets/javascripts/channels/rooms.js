@@ -36,6 +36,10 @@ App.rooms = App.cable.subscriptions.create("RoomsChannel", {
     } else {
       var otherRoom = document.querySelector("[data-behavior='room-link'][data-room-id='" + data.room_id + "']");
       otherRoom.style.fontWeight = 'bold';
+      if (!window.star) {
+        otherRoom.innerText += '*';
+        window.star = true;
+      }
     }
 
   },
