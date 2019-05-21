@@ -5,7 +5,11 @@
 
         <div class="hero text--center">
           <h1 class="hero__title"><%= t('signup') %></h1>
-          <h3 class="hero__subtitle"><%= t('signuppage.or') %> <a  class="white-link" href="#"><%= t('signuppage.login') %></a> <%= t('signuppage.alreadyhave') %></h3>
+          <h3 class="hero__subtitle">
+            <%= t('signuppage.or') %>
+            <%= link_to(t('signuppage.login'), login_path, class: 'white-link') %>
+            <%= t('signuppage.alreadyhave') %>
+          </h3>
         </div>
 
         <section class="big-card">
