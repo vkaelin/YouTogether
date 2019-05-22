@@ -6,7 +6,6 @@
   background-repeat: no-repeat;
   width: 100%;
   min-height: 90vh;
-  padding-bottom: 150px;
   position: relative;
   overflow: hidden;
 
@@ -30,16 +29,14 @@
   &__img {
     height: 100%;
     min-height: 400px;
-    background: asset-url("yt.jpg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    box-shadow: $shadow-2;
+    background: asset-url("home.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   @include tablet-big-height {
     height: 90vh;
-    padding-bottom: 0;
   }
 }
 
