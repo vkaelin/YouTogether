@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'bcrypt' # For Authentification password
-gem 'carrierwave', '~> 1.1.0' # For users' avatars upload
+gem 'carrierwave', '~> 1.3.2' # For users' avatars upload
 gem 'redis' # To use in production with ActionCable
 gem 'kaminari' # Page system for rooms search
 gem "figaro" # Secure config for production
