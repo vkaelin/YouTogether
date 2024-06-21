@@ -1,0 +1,84 @@
+en:
+  account: 'Hesabım'
+  accountpage:
+    addfavorite: 'Favorilere Ekle'
+    createdrooms: 'Odalar'
+    favorites: 'Favori Videolar'
+    joinedrooms: 'Katıldığınız Odalar'
+    nofavorite: 'Favori Videonuz Bulunmamaktadır.!'
+    norooms: 'Herhangi Bir Odaya Katılmadınız!'
+    noroomscreated: 'Oda Oluşturmadınız!'
+    or: 'Yada'
+    updateaccount: 'Hesabımı Güncelle'
+    youraccount: 'Hesabım'
+  createfavoritepage:
+    add: 'Ekle'
+    placeholder: 'Youtube Linkini Yapıştırın'
+    subtitle: 'Sadece Youtube Videolarına İzin Verilmektedir.'
+    title: 'Favori Videolara Ekle'
+  createroompage:
+    createroom: 'Oda Oluştur'
+    title: 'Odanı Oluştur'
+  homepage:
+    dontwait: "Daha Fazla Bekleme! Bize Katıl."
+    login: 'Giriş Yap'
+    orlogin: 'Yada'
+    subtitle: 'YouTogether İle, Arkadaşlarınızla beraber,aynı anda eğlenin .'
+    title: 'Farklı Youtube Videoları İzle.'
+  login: 'Giriş Yap'
+  loginpage:
+    or: 'Yada'
+    donthave: "Hesabın Yoksa"
+    signup: 'Kayıt Ol'
+  logout: 'Çıkış Yap'
+  playerpage:
+    changeurl: 'URL Değiştir'
+    chat: 'Sohbet'
+    notsynchronized: 'Senkronize Edilmedi'
+    notvalid: 'Geçerli Bir Url Değil!'
+    pastelink: 'Youtube Linkini Buraya Yapıştırın.'
+    users: 'Kullanıcılar'
+    yourrooms: 'Odaların'
+  roomcard:
+    created: 'Oluşturulan'
+    delete: 'Odayı Sil'
+    deleteadmin: 'Sil'
+    join: 'Katıl'
+    joined: 'Katıldın'
+    leave: 'Ayrıl'
+  rooms: 'Odalar'
+  roomspage:
+    create: 'Oda Oluştur'
+    noresults: 'Oda Bulunamadı!'
+    orcreate: 'Yada Oda Oluştur:'
+    results: 'Sonuçlar : '
+    search: 'Oda Ara:'
+  search: 'Ara'
+  signup: 'Kayıt Ol'
+  signuppage:
+    alreadyhave: "Eğer Hesabın Varsa."
+    login: 'Giriş Yap'
+    or: 'Yada'
+  userpage:
+    backtorooms: 'Odalara Geri Dön'
+    date: 'Hesabı Oluşturma Tarihi '
+    details: 'İletişim Detayları'
+    favorite: 'Favori Videolar'
+    name: 'İsim'
+    nofavorite: 'Favori Videosu Yok.'
+    profile: 'Profili'
+  helpers:
+    label:
+      user:
+        email: 'Email'
+        name: 'İsim'
+        password: 'Şifre'
+        avatar: 'Avatar'
+      room:
+        name: 'İsim'
+  views:
+    pagination:
+      first: "&laquo; İlk"
+      last: "Son &raquo;"
+      previous: "&lsaquo; Önceki"
+      next: "Sonraki &rsaquo;"
